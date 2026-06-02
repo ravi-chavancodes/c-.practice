@@ -14,4 +14,34 @@ return 0;
 }
 */
 
- //
+/*//  factorial
+
+int factorial (int n){
+    if(n==0){
+        return 1;
+    }
+    return n* factorial(n-1);
+}
+   int main () {
+int ans = factorial(5);
+cout << ans <<endl;
+
+   return 0;
+   }
+   */
+
+// decreasing  order 
+
+void print (int n){
+    if (n==0){
+        return ;
+    }
+    cout<<n<<" ";
+    print (n-1);
+}
+int main(){
+    print(5);
+    return 0;
+}
+
+
