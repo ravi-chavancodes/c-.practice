@@ -30,18 +30,32 @@ cout << ans <<endl;
    }
    */
 
-// decreasing  order 
+ /*// decreasing order
 
-void print (int n){
-    if (n==0){
+   void print (int n){
+        if (n==0){
         return ;
     }
-    cout<<n<<" ";
+    cout<< n <<" ";
     print (n-1);
 }
 int main(){
     print(5);
     return 0;
 }
+    */
 
+    // sum of n natural no 
+
+    int sum (int n){
+        if (n==1){
+            return 1;
+        }
+    return n + sum(n-1);
+    }
+
+    int main(){
+        cout<< sum(5)<<endl;
+        return 0;
+    }
 
