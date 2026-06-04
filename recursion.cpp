@@ -45,7 +45,7 @@ int main(){
 }
     */
 
-    // sum of n natural no 
+  /*  // sum of n natural no 
 
     int sum (int n){
         if (n==1){
@@ -58,4 +58,19 @@ int main(){
         cout<< sum(5)<<endl;
         return 0;
     }
+*/
 
+  //fibonacci no
+
+  int fibo(int n){
+    if (n==0 || n==1){
+        return n;
+    }
+    return fibo(n-1) + fibo(n-2);
+  }
+
+  int main(){
+    cout<<fibo(4)<<endl;
+
+    return 0;
+  }
