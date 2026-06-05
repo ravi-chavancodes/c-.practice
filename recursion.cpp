@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-/* // function 
+/*    // function 
 void func(){
     cout <<" hey buddie ";
 
@@ -14,7 +14,7 @@ return 0;
 }
 */
 
-/*//  factorial
+/*    //  factorial
 
 int factorial (int n){
     if(n==0){
@@ -30,7 +30,7 @@ cout << ans <<endl;
    }
    */
 
- /*// decreasing order
+ /*  // decreasing order
 
    void print (int n){
         if (n==0){
@@ -60,7 +60,8 @@ int main(){
     }
 */
 
-  //fibonacci no
+ /*  // fibonacci no
+
 
   int fibo(int n){
     if (n==0 || n==1){
@@ -74,3 +75,30 @@ int main(){
 
     return 0;
   }
+    */
+
+    // check sorted array
+
+    bool issorted (int arr [], int n, int i ){
+
+        if (i== n-1){
+            return true;
+        }
+        if(arr[i] > arr[i+1]){
+
+        return false;
+    }
+    return issorted(arr , n , i+1);
+    }
+
+    int main(){
+
+        int arr1[5] = {1,2,3,4,5};
+        int arr2[5] = {1,2,4,3,5};
+
+        cout<< issorted(arr1 , 5 ,0)<< "\n" ;
+        cout<< issorted(arr2 , 5 ,0) << endl;
+
+
+    return 0;
+    }
