@@ -77,7 +77,7 @@ int main(){
   }
     */
 
-    // check sorted array
+  /*  // check sorted array
 
     bool issorted (int arr [], int n, int i ){
 
@@ -102,3 +102,18 @@ int main(){
 
     return 0;
     }
+    */
+
+      // first occurence 
+
+int occur ( vector<int> arr , int  i , int target){
+    if (arr[i]== target){
+    return i;
+    }
+    return occur(arr , i+1 ,target);
+}
+
+int main(){
+    vector<int>arr = {1,2,3,3,3,4,5};
+    cout<<occur(arr,0,3)<<endl;
+}
