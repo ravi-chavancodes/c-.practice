@@ -119,7 +119,7 @@ int main(){
 }
 */
 
-   // last occurence
+ /*  // last occurence
 
 int lastoccur(vector<int> arr , int target, int i){
     if (i == arr.size()){
@@ -138,3 +138,24 @@ int main(){
     vector<int> arr ={1,2,3,3,3,4};
     cout<<lastoccur(arr , 3 ,0)<<endl;
 }
+    */
+
+    // print x to the power n
+
+    int power(int x ,int n){
+        if(n==0){
+    return 1;
+}
+ int halfpower = power(x,n/2);
+ int halfsquare =  halfpower * halfpower ;
+
+ if (n%2 != 0){
+
+    return x * halfsquare ;
+ }
+ return halfsquare;
+    }
+    int main(){
+        cout<<power(2,10)<<endl;
+        return 0;
+    }
