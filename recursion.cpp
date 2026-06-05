@@ -104,7 +104,7 @@ int main(){
     }
     */
 
-      // first occurence 
+ /*  // first occurence 
 
 int occur ( vector<int> arr , int  i , int target){
     if (arr[i]== target){
@@ -116,4 +116,25 @@ int occur ( vector<int> arr , int  i , int target){
 int main(){
     vector<int>arr = {1,2,3,3,3,4,5};
     cout<<occur(arr,0,3)<<endl;
+}
+*/
+
+   // last occurence
+
+int lastoccur(vector<int> arr , int target, int i){
+    if (i == arr.size()){
+        return -1;
+    }
+
+    int idxfound(lastoccur(arr , target ,i+1));
+
+    if(idxfound == -1 && arr[i] == target ){
+        return i;
+    }
+    return idxfound;
+}
+int main(){
+
+    vector<int> arr ={1,2,3,3,3,4};
+    cout<<lastoccur(arr , 3 ,0)<<endl;
 }
