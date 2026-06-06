@@ -140,7 +140,7 @@ int main(){
 }
     */
 
-    // print x to the power n
+  /*  // print x to the power n
 
     int power(int x ,int n){
         if(n==0){
@@ -159,3 +159,5 @@ int main(){
         cout<<power(2,10)<<endl;
         return 0;
     }
+        */
+       
