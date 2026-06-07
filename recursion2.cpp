@@ -19,12 +19,12 @@ int main(){
 }
     */
 
-    // remove duplicate in string
+ /*   // remove duplicate in string
 
     void removeduplicates( string str , string ans , int i , int map[26]){
      
       if(i == str.size()){
-    cout << "ans : " << ans << endl;
+    cout << "ans : " << ans << endl;  // base class 
     return;
       }
       char ch = str[i];
@@ -35,7 +35,7 @@ int main(){
         removeduplicates(str,ans,i+1,map);  // duplicate 
       }
      else{
-      map[mapidx] =true;
+      map[mapidx] = true;
       removeduplicates(str,ans+str[i],i+1,map);  // not duplicate
      }
     } 
@@ -48,4 +48,19 @@ int main(){
       removeduplicates (str , ans , 0 ,map);
 
       return 0;
+    }
+      */
+
+      // friend pairing problem
+
+    int friends (int n ){
+      if(n ==1 || n==2){
+        return n;
+      } 
+
+      return friends(n-1) + (n-1) * friends(n-2);  // singl + pair 
+    }
+
+    int main(){
+      cout<<friends(4)<<endl;
     }
