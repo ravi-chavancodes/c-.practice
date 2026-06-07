@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
- /* // tiling problem
+ /*    // tiling problem
 
    int tile(int n ){
 
@@ -51,7 +51,7 @@ int main(){
     }
       */
 
-      // friend pairing problem
+ /*  // friend pairing problem
 
     int friends (int n ){
       if(n ==1 || n==2){
@@ -63,4 +63,27 @@ int main(){
 
     int main(){
       cout<<friends(4)<<endl;
+    }
+      */
+
+    // binary string problem
+
+    void binstring (int n , int lastplace , string ans ){
+      if(n==0){
+        cout<<ans<<endl;
+        return;
+      }
+      if(lastplace!=1){
+        binstring(n-1,0,ans + '0');
+        binstring(n-1,1,ans + '1');
+      }
+      else{
+        binstring(n-1,0,ans + '0');
+      }
+    } 
+
+    int main(){
+      string ans = "";
+      binstring (3,0,ans);
+      return 0;
     }
