@@ -122,7 +122,7 @@ int main() {
 }
     */
 
-      // print the index of key 
+ /*  // print the index of key 
 
 void search(int arr [], int n , int idx , int key){
   if(idx == n){
@@ -143,5 +143,72 @@ int main() {
     search(arr, n, 0, key);
 
     return 0;
-
 }
+    */
+
+/*   // binary search mid 
+
+int binarySearch(int arr[], int si, int ei, int key) {
+    // Base Case
+    if (si > ei) {
+        return -1;
+    }
+
+    int mid = (si + ei) / 2;
+
+    if (arr[mid] == key) {
+        return mid;
+    }
+
+    if (arr[mid] < key) {
+        return binarySearch(arr, mid + 1, ei, key);  // right half
+    } else {
+        return binarySearch(arr, si, mid - 1, key);  // left half
+    }
+}
+
+int main() {
+    int arr[] = {1, 2, 3, 4, 5, 6, 7};
+    int n = 7;
+    int key = 5;
+
+    cout << binarySearch(arr, 0, n - 1, key);
+
+    return 0;
+}
+    */ 
+
+ /*   // We are given a string S, we need to find the count of all contiguous substrings
+    // starting and ending with the same character. [Leetcode Premium Qs]
+
+int count(string s, int start, int end) {
+    if (start == end) {
+        return 1;
+    }
+
+    if (start > end) {
+        return 0;
+    }
+
+    int sum = 0;
+
+    if (s[start] == s[end]) {
+        sum++;
+    }
+
+    sum += count(s, start + 1, end)
+         + count(s, start, end - 1)
+         - count(s, start + 1, end - 1);
+
+    return sum;
+}
+
+int main() {
+    string s = "aba";
+
+    cout << count(s, 0, s.length() - 1);
+
+    return 0;
+}
+    */
+   
