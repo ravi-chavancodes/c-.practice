@@ -66,7 +66,7 @@ int main(){
     }
       */
 
-    // binary string problem
+/*    // binary string problem
 
     void binstring (int n , int lastplace , string ans ){
       if(n==0){
@@ -74,11 +74,11 @@ int main(){
         return;
       }
       if(lastplace!=1){
-        binstring(n-1,0,ans + '0');
-        binstring(n-1,1,ans + '1');
+        binstring(n-1,0,ans + '0');  // place 0 in last 
+        binstring(n-1,1,ans + '1');  // place 1 in last 
       }
       else{
-        binstring(n-1,0,ans + '0');
+        binstring(n-1,0,ans + '0');  // place 0 if previous is 1
       }
     } 
 
@@ -87,3 +87,33 @@ int main(){
       binstring (3,0,ans);
       return 0;
     }
+      */
+     
+    // fast expotention
+
+int power(int a, int n) {
+    if (n == 0) {
+        return 1;
+    }
+
+    if (n % 2 == 1) {
+        return power(a, n / 2) * power(a, n / 2) * a;
+    }
+    else {
+        return power(a, n / 2) * power(a, n / 2);
+    }
+}
+
+int main() {
+    int a, n;
+
+    cout << "a = ";
+    cin >> a;
+
+    cout << "n = ";
+    cin >> n;
+
+    cout << "Output = " << power(a, n) << endl;
+
+    return 0;
+}
