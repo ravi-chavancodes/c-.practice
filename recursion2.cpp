@@ -89,7 +89,10 @@ int main(){
     }
       */
      
-    // fast expotention
+      // practice 
+
+      
+ /*   // fast expotention
 
 int power(int a, int n) {
     if (n == 0) {
@@ -116,4 +119,29 @@ int main() {
     cout << "Output = " << power(a, n) << endl;
 
     return 0;
+}
+    */
+
+      // print the index of key 
+
+void search(int arr [], int n , int idx , int key){
+  if(idx == n){
+    return;
+  }
+  if(arr[idx]== key){
+    cout<<idx<<endl;
+  }
+  search(arr,n , idx +1 , key);
+}
+
+int main() {
+
+    int arr[] = {1, 2, 3, 2, 5, 2};
+    int n = 6;
+    int key = 2;
+
+    search(arr, n, 0, key);
+
+    return 0;
+
 }
