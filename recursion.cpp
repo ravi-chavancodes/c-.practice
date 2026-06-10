@@ -161,3 +161,20 @@ int main(){
     }
         */
        
+/*      // print no 1 to n
+
+void printInc(int n) {
+    if (n == 1) {
+        cout << 1 << " ";
+        return;
+    }
+
+    printInc(n - 1);
+    cout << n << " ";
+}
+
+int main() {
+    printInc(5);
+}
+    */
+   
