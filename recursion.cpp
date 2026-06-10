@@ -178,3 +178,25 @@ int main() {
 }
     */
    
+      // finding index of the key
+
+int firstOccurrence(int arr[], int n, int i, int key) {
+    if (i == n) {
+        return -1;
+    }
+
+    if (arr[i] == key) {
+        return i;
+    }
+
+    return firstOccurrence(arr, n, i + 1, key);
+}
+
+int main() {
+    int arr[] = {2, 4, 6, 8, 6, 10};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    cout << firstOccurrence(arr, n, 0, 6);
+
+    return 0;
+}
