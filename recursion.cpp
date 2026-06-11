@@ -178,7 +178,7 @@ int main() {
 }
     */
    
-      // finding index of the key
+/*     // finding index of the key
 
 int firstOccurrence(int arr[], int n, int i, int key) {
     if (i == n) {
@@ -200,3 +200,5 @@ int main() {
 
     return 0;
 }
+*/
+
