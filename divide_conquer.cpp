@@ -86,7 +86,7 @@ int main()
 
     // quick soort
 
-// print the array
+/* // print the array
 void printarr (int arr[],int n ){
     for (int i = 0; i < n; i++)
     {
@@ -136,3 +136,5 @@ int main() {
     printarr (arr,n); 
 return 0;
 }
+*/
+
