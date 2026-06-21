@@ -82,4 +82,18 @@ return 0;
 }
 */
 
-   
+   // max element
+
+int main() {
+    int arr[] = {4, 2, 9, 1, 7};
+    int n = 5;
+
+    int maxi = arr[0];
+
+    for(int i = 1; i < n; i++) {
+        if(arr[i] > maxi)
+            maxi = arr[i];
+    }
+
+    cout << maxi;
+}
