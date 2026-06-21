@@ -82,7 +82,7 @@ return 0;
 }
 */
 
-   // max element
+/*  // max element
 
 int main() {
     int arr[] = {4, 2, 9, 1, 7};
@@ -97,3 +97,20 @@ int main() {
 
     cout << maxi;
 }
+    */
+
+/*    // counting vowela
+
+int main() {
+    string s = "education";
+    int count = 0;
+
+    for(char ch : s) {
+        if(ch=='a' || ch=='e' || ch=='i' ||
+           ch=='o' || ch=='u')
+            count++;
+    }
+
+    cout << count;
+}
+*/
