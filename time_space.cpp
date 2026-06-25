@@ -41,7 +41,7 @@ void printPairs(vector<int>& arr) {
 }
     */
 
-// O(log n) Time , O(1) Space
+/* // O(log n) Time , O(1) Space
 
 int binarySearch(vector<int>& arr, int target) {
 
@@ -64,3 +64,4 @@ int binarySearch(vector<int>& arr, int target) {
 
     return -1;
 }
+    */
