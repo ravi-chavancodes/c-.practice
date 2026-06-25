@@ -15,12 +15,28 @@ int main()
 }
  */
 
+ /* // Find Sum of Array TC: O(n) , SC: O(1)
 int main() {
     int arr[] = {1, 2, 3, 4, 5};
     int sum = 0;
 
     for(int i = 0; i < 5; i++) {
-        sum += arr[i];
+        sum += arr[i];  // The loop visits every element once. Only one extra variable (sum) is used.
     }
     cout << sum;
 }
+    */
+
+/* // O(n^2) Time ,  O(1) Space
+
+void printPairs(vector<int>& arr) {
+
+    for(int i = 0; i < arr.size(); i++) {  // outer loop n 
+
+        for(int j = 0; j < arr.size(); j++) { // inner loop n
+
+            cout << arr[i] << " " << arr[j] << endl;  // n * n = n²
+        }
+    }
+}
+    */
