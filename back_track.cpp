@@ -3,7 +3,7 @@
 #include<vector>
  using namespace std;
 
-  // backtracking on arr 
+  /* // backtracking on arr 
 
   void printarr(int arr[], int n){ // print 0-n
     for (int i = 0; i < n; i++)
@@ -33,3 +33,5 @@
     printarr(arr,n);
     return 0;
   }
+    */
+   
