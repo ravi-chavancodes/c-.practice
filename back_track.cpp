@@ -73,7 +73,7 @@ int main() {
 }
     */
 
-   /* // permutation
+  /* // permutation
 void permutation(string str , string ans){
      
    int n = str.size();
@@ -99,7 +99,7 @@ void permutation(string str , string ans){
     }
       */
 
-      // n queens
+   /*   // n queens
 
 bool isSafe(vector<string> &board, int row, int col, int n) {
 
@@ -161,3 +161,5 @@ int main() {
 
     return 0;
 }
+    */
+   
