@@ -73,7 +73,7 @@ int main() {
 }
     */
 
-    // permutation
+   /* // permutation
 void permutation(string str , string ans){
      
    int n = str.size();
@@ -97,3 +97,67 @@ void permutation(string str , string ans){
       permutation(str,ans);
       return 0;
     }
+      */
+
+      // n queens
+
+bool isSafe(vector<string> &board, int row, int col, int n) {
+
+    // Check upper column
+    for (int i = row - 1; i >= 0; i--) {
+        if (board[i][col] == 'Q')
+            return false;
+    }
+
+    // Check upper left diagonal
+    for (int i = row - 1, j = col - 1; i >= 0 && j >= 0; i--, j--) {
+        if (board[i][j] == 'Q')
+            return false;
+    }
+
+    // Check upper right diagonal
+    for (int i = row - 1, j = col + 1; i >= 0 && j < n; i--, j++) {
+        if (board[i][j] == 'Q')
+            return false;
+    }
+
+    return true;
+}
+
+void solve(vector<string> &board, int row, int n) {
+
+    // Base Case
+    if (row == n) {
+
+        for (int i = 0; i < n; i++) {
+            cout << board[i] << endl;
+        }
+        cout << endl;
+
+        return;
+    }
+
+    // Try placing queen in every column
+    for (int col = 0; col < n; col++) {
+
+        if (isSafe(board, row, col, n)) {
+
+            board[row][col] = 'Q';     // Place Queen
+
+            solve(board, row + 1, n);  // Recursive Call
+
+            board[row][col] = '.';     // Backtracking
+        }
+    }
+}
+
+int main() {
+
+    int n = 4;
+
+    vector<string> board(n, string(n, '.'));
+
+    solve(board, 0, n);
+
+    return 0;
+}
