@@ -20,8 +20,8 @@
         return ;
     }
     
-    arr[i]=i+1;
-    changearr(arr,n,i+1);
+    arr[i]=i+1;  // print curr
+    changearr(arr,n,i+1);  // fill the next 
     arr[i]-= 2;
   }
   
@@ -34,4 +34,26 @@
     return 0;
   }
     */
-   
+
+  // find subset
+
+void printsubsets(string str , string subset){
+  if (str.size()==0)
+  {
+    cout<<subset<<"\n";
+    return;
+  }
+  char ch = str[0];  
+  printsubsets(str.substr(1,str.size()-1),subset+ch); // yes cjhoice
+
+  printsubsets(str.substr(1,str.size()-1),subset); // no choice
+  
+}
+
+  int main(){
+    string str = "a,b,c";
+    string subset = " ";
+
+    printsubsets(str,subset);
+    return 0;
+  }
