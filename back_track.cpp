@@ -35,25 +35,40 @@
   }
     */
 
-  // find subset
+  /* // find subset
 
-void printsubsets(string str , string subset){
-  if (str.size()==0)
-  {
-    cout<<subset<<"\n";
-    return;
-  }
-  char ch = str[0];  
-  printsubsets(str.substr(1,str.size()-1),subset+ch); // yes cjhoice
+void printSubsets(string str, string subset) {
 
-  printsubsets(str.substr(1,str.size()-1),subset); // no choice
-  
+    // Base case
+
+    if (str.size() == 0) {
+
+        cout << subset << endl;
+
+        return;
+
+    }
+
+    char ch = str[0];
+
+    // Yes choice (include current character)
+
+    printSubsets(str.substr(1), subset + ch);
+
+    // No choice (exclude current character)
+
+    printSubsets(str.substr(1), subset);
+
 }
 
-  int main(){
-    string str = "a,b,c";
-    string subset = " ";
+int main() {
 
-    printsubsets(str,subset);
+    string str = "abc";     // No commas
+
+    string subset = "";     // Empty string
+
+    printSubsets(str, subset);
     return 0;
-  }
+
+}
+    */
