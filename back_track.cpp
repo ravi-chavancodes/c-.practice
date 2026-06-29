@@ -99,7 +99,7 @@ void permutation(string str , string ans){
     }
       */
 
-   /*   // n queens
+ /*   // n queens
 
 bool isSafe(vector<string> &board, int row, int col, int n) {
 
@@ -162,4 +162,30 @@ int main() {
     return 0;
 }
     */
-   
+
+    // grid ways
+int gridways(int r, int c , int m , int n){
+
+    if (r == n-1 && c == m-1)
+    {
+        return 1;
+    }
+    if (r >= n || c >=m)
+    {
+        return 0;
+    }
+    //right
+    int right = gridways(r,c+1,n,m);
+    //down
+    int down = gridways(r+1,c,n,m);
+
+    return right + down ;
+}
+
+int main(){
+    int n = 3;
+    int m = 3; // 3x3
+
+    cout<<gridways(0,0,n,m);
+    return 0;
+}
