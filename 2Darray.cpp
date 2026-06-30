@@ -139,7 +139,7 @@ int main(){
 }
     */
 
- /* // matrix pointer
+/* // matrix pointer
 int main(){
 
 int mat [4] [4]
@@ -154,7 +154,6 @@ cout <<  mat+1 << " = " << &mat [1] [0] <<endl;
 return 0;
 }
 */
-  
 
 
   
