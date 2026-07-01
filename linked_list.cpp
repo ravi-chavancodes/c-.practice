@@ -48,6 +48,15 @@ public:
         tail = newNode;        // move tail forward
     }
 }
+   void printlist(){
+    node* temp = head;
+
+    while(temp != NULL){
+        cout<<temp->data<<"->";
+        temp = temp->next;
+    }
+   }
+  
 };
 
 int main(){
@@ -56,6 +65,8 @@ int main(){
     ll.pushfront(3);
     ll.pushfront(2);
     ll.pushfront(1);
+
+    ll.printlist();
 
     return 0;
 }
