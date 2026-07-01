@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-/* // basic structure of linked list
+// basic structure of linked list & push front
 class node{
 public:
     int data;
@@ -24,17 +24,30 @@ public:
     }
 
     void pushfront(int val) {
-        node* newNode = new node(val); // dynamic
+        node* newNode = new node(val); // new node
 
         if(head == NULL)
         {
             head = tail = newNode;
         }
         else{
-            newNode->next = head;
-            head = newNode;
+            newNode->next = head;  // point new node to current head
+            head = newNode;        // update head
         }
     }
+
+    void push_back(int val) {
+    node* newNode = new node(val);
+
+    // if list is empty
+    if (head == NULL) {
+        head = tail = newNode;
+    }
+    else {
+        tail->next = newNode;  // attach at end
+        tail = newNode;        // move tail forward
+    }
+}
 };
 
 int main(){
@@ -46,4 +59,3 @@ int main(){
 
     return 0;
 }
-*/
