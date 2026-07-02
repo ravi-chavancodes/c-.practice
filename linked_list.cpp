@@ -55,6 +55,12 @@ public:
         cout<<temp->data<<"->";
         temp = temp->next;
     }
+    cout<<"NULL\n";
+   }
+
+   void insert(int val , int pos){
+    node* newNode = new node(val);
+
    }
   
 };
@@ -65,6 +71,11 @@ int main(){
     ll.pushfront(3);
     ll.pushfront(2);
     ll.pushfront(1);
+
+    ll.printlist();
+
+    ll.push_back(4);
+    ll.push_back(5);
 
     ll.printlist();
 
