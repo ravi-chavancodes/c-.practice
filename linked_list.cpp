@@ -11,6 +11,17 @@ public:
         data = val;
         next = NULL;
     }
+
+    // deleting ll (distruct)
+    ~node(){
+        cout<<"node"<<data<<endl;
+        if (next != NULL)
+        {
+            delete next;
+            next = NULL;
+        }
+        
+    }
 };
 
 class list{
@@ -23,6 +34,17 @@ public:
         tail = NULL;
     }
 
+    // deleting ll (distructor)
+    ~list(){
+        cout<<"~list"<<endl;
+        if (head != NULL)
+        {
+        delete head;
+        head = NULL;
+        }
+        
+    }
+// push front
     void pushfront(int val) {
         node* newNode = new node(val); // new node
 
@@ -35,7 +57,7 @@ public:
             head = newNode;        // update head
         }
     }
-
+// push back
     void push_back(int val) {
     node* newNode = new node(val);
 
@@ -48,6 +70,7 @@ public:
         tail = newNode;        // move tail forward
     }
 }
+// print list
    void printlist(){
     node* temp = head;
 
