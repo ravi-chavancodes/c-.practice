@@ -60,7 +60,17 @@ public:
 
    void insert(int val , int pos){
     node* newNode = new node(val);
+    
+    node* temp = head; 
+    for (int i = 0; i < pos -1; i++)
+    {
+        temp = temp->next;
+    }
 
+    //temp is now at pos-1 i.e. prev/left
+    newNode->next = temp->next; 
+    temp->next = newNode; 
+    
    }
   
 };
@@ -72,12 +82,14 @@ int main(){
     ll.pushfront(2);
     ll.pushfront(1);
 
-    ll.printlist();
+    ll.printlist();//1-2-3
 
     ll.push_back(4);
     ll.push_back(5);
 
-    ll.printlist();
-
+    ll.printlist();// 1-2-3-4-5-null
+    
+    ll.insert(100,2);
+    ll.printlist();//1-2-100-3-4-5-null
     return 0;
 }
