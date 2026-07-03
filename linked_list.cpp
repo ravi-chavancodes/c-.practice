@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-
+/* // push front , push back ,print ll , delete .
 // basic structure of linked list & push front
 class node{
 public:
@@ -116,3 +116,71 @@ int main(){
     ll.printlist();//1-2-100-3-4-5-null
     return 0;
 }
+*/
+
+   // pop_front
+
+#include <iostream>
+using namespace std;
+
+class node {
+public:
+    int data;
+    node* next;
+
+    node(int val) {
+        data = val;
+        next = NULL;
+    }
+};
+
+class list {
+public:
+    node* head;
+
+    list() {
+        head = NULL;
+    }
+
+    void popFront() {
+        if (head == NULL) {
+            cout << "List is empty!" << endl;
+            return;
+        }
+
+        node* temp = head;
+        head = head->next;
+        delete temp;
+    }
+
+    void printlist() {
+        node* temp = head;
+
+        while (temp != NULL) {
+            cout << temp->data << " -> ";
+            temp = temp->next;
+        }
+
+        cout << "NULL" << endl;
+    }
+};
+
+int main() {
+    list ll;
+
+    // Creating the list manually
+    ll.head = new node(10);
+    ll.head->next = new node(20);
+    ll.head->next->next = new node(30);
+
+    cout << "Before popFront(): ";
+    ll.printlist();
+
+    ll.popFront();
+
+    cout << "After popFront(): ";
+    ll.printlist();
+
+    return 0;
+}
+        
