@@ -118,11 +118,7 @@ int main(){
 }
 */
 
-   // pop_front
-
-#include <iostream>
-using namespace std;
-
+ /*  // pop_front
 class node {
 public:
     int data;
@@ -183,4 +179,96 @@ int main() {
 
     return 0;
 }
-        
+        */
+
+    // pop_back
+
+class node{
+public:
+    int data;
+    node* next;
+
+    node(int val){
+        data = val;
+        next = NULL;
+    }
+};
+
+class list{
+    node* head;
+    node* tail;
+
+public:
+    list(){
+        head = NULL;
+        tail = NULL;
+    }
+
+    void pushBack(int val){
+        node* newNode = new node(val);
+
+        if(head == NULL){
+            head = tail = newNode;
+        }
+        else{
+            tail->next = newNode;
+            tail = newNode;
+        }
+    }
+
+    void popBack(){
+
+        if(head == NULL){
+            cout << "List is empty!" << endl;
+            return;
+        }
+
+        if(head == tail){
+            delete head;
+            head = tail = NULL;
+            return;
+        }
+
+        node* temp = head;
+
+        while(temp->next != tail){
+            temp = temp->next;
+        }
+
+        delete tail;
+        tail = temp;
+        tail->next = NULL;
+    }
+
+    void printList(){
+        node* temp = head;
+
+        while(temp != NULL){
+            cout << temp->data << " -> ";
+            temp = temp->next;
+        }
+
+        cout << "NULL" << endl;
+    }
+};
+
+int main(){
+
+    list ll;
+
+    // Create the list
+    ll.pushBack(10);
+    ll.pushBack(20);
+    ll.pushBack(30);
+    ll.pushBack(40);
+
+    cout << "Before popBack: ";
+    ll.printList();
+
+    ll.popBack();
+
+    cout << "After popBack: ";
+    ll.printList();
+
+    return 0;
+}
