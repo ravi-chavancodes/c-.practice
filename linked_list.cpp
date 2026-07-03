@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
-/* // push front , push back ,print ll , delete .
-// basic structure of linked list & push front
+
+// Node
 class node{
 public:
     int data;
@@ -11,199 +11,34 @@ public:
         data = val;
         next = NULL;
     }
-
-    // deleting ll (distruct)
-    ~node(){
-        cout<<"node"<<data<<endl;
-        if (next != NULL)
-        {
-            delete next;
-            next = NULL;
-        }
-        
-    }
 };
 
+// Linked List
 class list{
     node* head;
     node* tail;
 
 public:
+    // Constructor
     list(){
         head = NULL;
         tail = NULL;
     }
 
-    // deleting ll (distructor)
-    ~list(){
-        cout<<"~list"<<endl;
-        if (head != NULL)
-        {
-        delete head;
-        head = NULL;
-        }
-        
-    }
-// push front
-    void pushfront(int val) {
-        node* newNode = new node(val); // new node
+    // Push Front
+    void pushFront(int val){
+        node* newNode = new node(val);
 
-        if(head == NULL)
-        {
+        if(head == NULL){
             head = tail = newNode;
         }
         else{
-            newNode->next = head;  // point new node to current head
-            head = newNode;        // update head
+            newNode->next = head;
+            head = newNode;
         }
     }
-// push back
-    void push_back(int val) {
-    node* newNode = new node(val);
 
-    // if list is empty
-    if (head == NULL) {
-        head = tail = newNode;
-    }
-    else {
-        tail->next = newNode;  // attach at end
-        tail = newNode;        // move tail forward
-    }
-}
-// print list
-   void printlist(){
-    node* temp = head;
-
-    while(temp != NULL){
-        cout<<temp->data<<"->";
-        temp = temp->next;
-    }
-    cout<<"NULL\n";
-   }
-
-   void insert(int val , int pos){
-    node* newNode = new node(val);
-    
-    node* temp = head; 
-    for (int i = 0; i < pos -1; i++)
-    {
-        temp = temp->next;
-    }
-
-    //temp is now at pos-1 i.e. prev/left
-    newNode->next = temp->next; 
-    temp->next = newNode; 
-    
-   }
-  
-};
-
-int main(){
-    list ll;
-
-    ll.pushfront(3);
-    ll.pushfront(2);
-    ll.pushfront(1);
-
-    ll.printlist();//1-2-3
-
-    ll.push_back(4);
-    ll.push_back(5);
-
-    ll.printlist();// 1-2-3-4-5-null
-    
-    ll.insert(100,2);
-    ll.printlist();//1-2-100-3-4-5-null
-    return 0;
-}
-*/
-
- /*  // pop_front
-class node {
-public:
-    int data;
-    node* next;
-
-    node(int val) {
-        data = val;
-        next = NULL;
-    }
-};
-
-class list {
-public:
-    node* head;
-
-    list() {
-        head = NULL;
-    }
-
-    void popFront() {
-        if (head == NULL) {
-            cout << "List is empty!" << endl;
-            return;
-        }
-
-        node* temp = head;
-        head = head->next;
-        delete temp;
-    }
-
-    void printlist() {
-        node* temp = head;
-
-        while (temp != NULL) {
-            cout << temp->data << " -> ";
-            temp = temp->next;
-        }
-
-        cout << "NULL" << endl;
-    }
-};
-
-int main() {
-    list ll;
-
-    // Creating the list manually
-    ll.head = new node(10);
-    ll.head->next = new node(20);
-    ll.head->next->next = new node(30);
-
-    cout << "Before popFront(): ";
-    ll.printlist();
-
-    ll.popFront();
-
-    cout << "After popFront(): ";
-    ll.printlist();
-
-    return 0;
-}
-        */
-
-    // pop_back
-
-class node{
-public:
-    int data;
-    node* next;
-
-    node(int val){
-        data = val;
-        next = NULL;
-    }
-};
-
-class list{
-    node* head;
-    node* tail;
-
-public:
-    list(){
-        head = NULL;
-        tail = NULL;
-    }
-
+    // Push Back
     void pushBack(int val){
         node* newNode = new node(val);
 
@@ -216,6 +51,24 @@ public:
         }
     }
 
+    // Pop Front
+    void popFront(){
+
+        if(head == NULL){
+            cout << "List is empty!" << endl;
+            return;
+        }
+
+        node* temp = head;
+        head = head->next;
+        delete temp;
+
+        if(head == NULL){
+            tail = NULL;
+        }
+    }
+
+    // Pop Back
     void popBack(){
 
         if(head == NULL){
@@ -231,7 +84,7 @@ public:
 
         node* temp = head;
 
-        while(temp->next != tail){
+        while(temp->next->next != tail){
             temp = temp->next;
         }
 
@@ -240,7 +93,24 @@ public:
         tail->next = NULL;
     }
 
+    // Insert at Position
+    void insert(int val,int pos){
+
+        node* newNode = new node(val);
+
+        node* temp = head;
+
+        for(int i=0;i<pos-1;i++){
+            temp = temp->next;
+        }
+
+        newNode->next = temp->next;
+        temp->next = newNode;
+    }
+
+    // Print List
     void printList(){
+
         node* temp = head;
 
         while(temp != NULL){
@@ -250,25 +120,46 @@ public:
 
         cout << "NULL" << endl;
     }
+
+    int searchitr(int key){
+        node* temp=head;
+        int idx =0;
+        while (temp!= NULL)
+        {
+            if (temp->data == key){
+                return idx;
+            }
+            temp = temp->next;
+            idx++;
+        }
+        return -1;
+    }
 };
 
 int main(){
 
     list ll;
 
-    // Create the list
-    ll.pushBack(10);
-    ll.pushBack(20);
-    ll.pushBack(30);
-    ll.pushBack(40);
+    // Create List
+    ll.pushFront(5);
+    ll.pushFront(4);
+    ll.pushFront(3);
+    ll.pushFront(2);
+    ll.pushFront(1);
 
-    cout << "Before popBack: ";
+    cout << "Original List: ";
     ll.printList();
 
-    ll.popBack();
+    // Uncomment ONE concept at a time
 
-    cout << "After popBack: ";
+    // ll.popFront();
+    // ll.popBack();
+    // ll.insert(100,2);
+
+    cout << "After Operation: ";
     ll.printList();
+
+    cout<<ll.searchitr(2)<<endl;
 
     return 0;
 }
