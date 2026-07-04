@@ -162,6 +162,25 @@ int searchrec(int key){
     return helper(head, key);
 }
 
+// Reverse Linked List
+void reverse(){
+
+    node* prev = NULL;
+    node* curr = head;
+
+    while(curr != NULL){
+
+        node* next = curr->next;
+
+        curr->next = prev;
+        prev = curr;
+        curr = next;
+    }
+
+    tail = head;
+    head = prev;
+}
+
 };
 
 int main(){
@@ -188,6 +207,9 @@ int main(){
     ll.printList();
 
     cout<<ll.searchrec(4)<<endl;
+
+    ll.reverse();
+    ll.printList();
 
     return 0;
 }
