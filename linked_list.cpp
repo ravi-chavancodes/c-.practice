@@ -208,8 +208,11 @@ int main(){
 
     cout<<ll.searchrec(4)<<endl;
 
-    ll.reverse();
+     ll.reverse();
     ll.printList();
 
     return 0;
 }
+
+
+// question find and remove nth node from end is remaining 
