@@ -134,6 +134,34 @@ public:
         }
         return -1;
     }
+// Recursive Search Helper
+int helper(node* temp, int key){
+
+    // Base Case 1: Key not found
+    if(temp == NULL){
+        return -1;
+    }
+
+    // Base Case 2: Key found
+    if(temp->data == key){
+        return 0;
+    }
+
+    // Recursive Call
+    int idx = helper(temp->next, key);
+
+    if(idx == -1){
+        return -1;
+    }
+
+    return idx + 1;
+}
+
+// Search Function
+int searchrec(int key){
+    return helper(head, key);
+}
+
 };
 
 int main(){
@@ -159,7 +187,7 @@ int main(){
     cout << "After Operation: ";
     ll.printList();
 
-    cout<<ll.searchitr(2)<<endl;
+    cout<<ll.searchrec(4)<<endl;
 
     return 0;
 }
