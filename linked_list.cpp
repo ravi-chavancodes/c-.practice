@@ -15,6 +15,7 @@ public:
 
 // Linked List
 class list{
+    public:
     node* head;
     node* tail;
 
@@ -181,6 +182,23 @@ void reverse(){
     head = prev;
 }
 
+bool iscycle(node* head) {
+    node* slow = head;
+    node* fast = head;
+
+    while (fast != NULL && fast->next != NULL) {
+        slow = slow->next;
+        fast = fast->next->next;
+
+        if (slow == fast) {
+            cout << "Cycle exists";
+            return true;
+        }
+    }
+
+    cout << "Cycle not there";
+    return false;
+}
 };
 
 int main(){
@@ -188,14 +206,17 @@ int main(){
     list ll;
 
     // Create List
-    ll.pushFront(5);
     ll.pushFront(4);
     ll.pushFront(3);
     ll.pushFront(2);
     ll.pushFront(1);
 
-    cout << "Original List: ";
-    ll.printList();
+    ll.tail->next = ll.head;
+
+    ll.iscycle(ll.head);   
+
+   // cout << "Original List: ";
+   // ll.printList();
 
     // Uncomment ONE concept at a time
 
@@ -203,13 +224,13 @@ int main(){
     // ll.popBack();
     // ll.insert(100,2);
 
-    cout << "After Operation: ";
-    ll.printList();
+    //cout << "After Operation: ";
+    // ll.printList();
 
-    cout<<ll.searchrec(4)<<endl;
+    // cout<<ll.searchrec(4)<<endl;
 
-     ll.reverse();
-    ll.printList();
+    // ll.reverse();
+    // ll.printList();
 
     return 0;
 }
