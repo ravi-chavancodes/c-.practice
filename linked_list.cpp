@@ -182,6 +182,7 @@ void reverse(){
     head = prev;
 }
 
+// Check Cycle
 bool iscycle(node* head) {
     node* slow = head;
     node* fast = head;
@@ -191,14 +192,15 @@ bool iscycle(node* head) {
         fast = fast->next->next;
 
         if (slow == fast) {
-            cout << "Cycle exists";
+            cout << "Cycle exists" << endl;
             return true;
         }
     }
 
-    cout << "Cycle not there";
+    cout << "Cycle not there" << endl;
     return false;
 }
+
 };
 
 int main(){
@@ -211,8 +213,8 @@ int main(){
     ll.pushFront(2);
     ll.pushFront(1);
 
-    ll.tail->next = ll.head;
-
+    ll.tail->next = ll.head;  // if not then cycle doesnt exsist
+    
     ll.iscycle(ll.head);   
 
    // cout << "Original List: ";
@@ -236,4 +238,151 @@ int main(){
 }
 
 
-// question find and remove nth node from end is remaining 
+// removing cycle in 
+/*
+
+// Node
+class node {
+public:
+    int data;
+    node* next;
+
+    node(int val) {
+        data = val;
+        next = NULL;
+    }
+};
+
+// Linked List
+class list {
+public:
+    node* head;
+    node* tail;
+
+    // Constructor
+    list() {
+        head = NULL;
+        tail = NULL;
+    }
+
+    // Push Front
+    void pushFront(int val) {
+        node* newNode = new node(val);
+
+        if (head == NULL) {
+            head = tail = newNode;
+        } else {
+            newNode->next = head;
+            head = newNode;
+        }
+    }
+
+    // Print List
+    void printList() {
+        node* temp = head;
+
+        while (temp != NULL) {
+            cout << temp->data << " -> ";
+            temp = temp->next;
+        }
+
+        cout << "NULL" << endl;
+    }
+
+    // Detect Cycle
+    bool isCycle(node* head) {
+        node* slow = head;
+        node* fast = head;
+
+        while (fast != NULL && fast->next != NULL) {
+            slow = slow->next;
+            fast = fast->next->next;
+
+            if (slow == fast) {
+                cout << "Cycle Exists" << endl;
+                return true;
+            }
+        }
+
+        cout << "No Cycle" << endl;
+        return false;
+    }
+
+    // Remove Cycle
+    void removeCycle(node* head) {
+
+        // Step 1: Detect Cycle
+        node* slow = head;
+        node* fast = head;
+        bool cycle = false;
+
+        while (fast != NULL && fast->next != NULL) {
+            slow = slow->next;
+            fast = fast->next->next;
+
+            if (slow == fast) {
+                cycle = true;
+                break;
+            }
+        }
+
+        if (!cycle) {
+            cout << "No Cycle Found!" << endl;
+            return;
+        }
+
+        // Step 2: Move slow to head
+        slow = head;
+
+        // Special Case: Cycle starts from head
+        if (slow == fast) {
+
+            while (fast->next != slow) {
+                fast = fast->next;
+            }
+
+            fast->next = NULL;
+            return;
+        }
+
+        // Normal Case
+        node* prev = NULL;
+
+        while (slow != fast) {
+            prev = fast;
+            slow = slow->next;
+            fast = fast->next;
+        }
+
+        prev->next = NULL;
+    }
+};
+
+int main() {
+
+    list ll;
+
+    // Create List
+    ll.pushFront(4);
+    ll.pushFront(3);
+    ll.pushFront(2);
+    ll.pushFront(1);
+
+    // Create Cycle
+    ll.tail->next = ll.head;
+
+    cout << "Before Removing Cycle:" << endl;
+    ll.isCycle(ll.head);
+
+    // Remove Cycle
+    ll.removeCycle(ll.head);
+
+    cout << "\nAfter Removing Cycle:" << endl;
+    ll.isCycle(ll.head);
+
+    cout << "\nLinked List:" << endl;
+    ll.printList();
+
+    return 0;
+}
+    */
