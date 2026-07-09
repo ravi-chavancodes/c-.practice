@@ -1,6 +1,17 @@
 #include<iostream>
 #include<list>
+#include<iterator>
 using namespace std;
+
+void printList(list<int> &ll) {
+    list<int>::iterator itr;
+
+    for (itr = ll.begin(); itr != ll.end(); itr++) {
+        cout << *itr << "->";
+
+    }
+    cout <<"null"<< endl;
+}
 
 int main(){
 
@@ -10,6 +21,9 @@ int main(){
     ll.push_front (1); //. 1-2
 
     ll.push_back (3); //.  1->2->3
-    ll.push_back(4); //.   1->2->4
+    ll.push_back(4); //.   1->2->3->4
+
+    printList(ll);
+    return 0;
 
 }
