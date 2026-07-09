@@ -6,7 +6,7 @@ using namespace std;
 void printList(list<int> &ll) {
     list<int>::iterator itr;
 
-    for (itr = ll.begin(); itr != ll.end(); itr++) {
+    for (itr = ll.begin(); itr != ll.end(); itr++) { // begin = st , end = end->next (null)
         cout << *itr << "->";
 
     }
@@ -24,6 +24,9 @@ int main(){
     ll.push_back(4); //.   1->2->3->4
 
     printList(ll);
+    cout<<ll.size()<<endl;
+    cout<<"head = " << ll.front()<<endl;
+    cout<<"tail = " << ll.back()<<endl;
     return 0;
 
 }
