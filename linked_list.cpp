@@ -349,6 +349,7 @@ public:
         node* prev = NULL;
 
         while (slow != fast) {
+
             prev = fast;
             slow = slow->next;
             fast = fast->next;
@@ -386,3 +387,5 @@ int main() {
     return 0;
 }
     */
+
+    
