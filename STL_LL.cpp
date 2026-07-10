@@ -3,6 +3,8 @@
 #include<iterator>
 using namespace std;
 
+/* // stl 
+
 void printList(list<int> &ll) {
     list<int>::iterator itr;
 
@@ -29,4 +31,24 @@ int main(){
     cout<<"tail = " << ll.back()<<endl;
     return 0;
 
+}
+    */
+
+// merge sort using ll 
+
+void mergeSort(Node* &head) {
+    // Base Case
+    if (head == NULL || head->next == NULL) {
+        return;
+    }
+
+    // Split the linked list into two halves
+    Node* rightHead = splitAtMid(head);
+
+    // Recursively sort both halves
+    mergeSort(head);        // Left half
+    mergeSort(rightHead);   // Right half
+
+    // Merge both sorted halves
+    head = merge(head, rightHead);
 }
