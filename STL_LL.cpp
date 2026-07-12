@@ -36,7 +36,7 @@ int main(){
 
 // merge sort using ll 
 
-// zig zag using ll 
+/* // zig zag using ll 
 
 // Node
 class Node {
@@ -152,3 +152,8 @@ int main() {
 
     return 0;
 }
+    */
+
+
+// doubly linked list
+
