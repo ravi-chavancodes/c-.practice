@@ -1,35 +1,49 @@
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <vector>
 using namespace std;
 
-// create stack using vector 
-class stack{
-vector<int> vec;
+class Stack {
+    vector<int> vec;
+
 public:
-//push
-    void push (int val) { //0(1)
-    vec. push_back (val);
+    // Push
+    void push(int val) {
+        vec.push_back(val);
     }
-// pop
-    void pop(){//0(1)
-        vec.pop_back();
+
+    // Pop
+    void pop() {
+        if (!isempty()) {
+            vec.pop_back();
+        }
     }
-//top
-int
-top() { //0(1)
-int lastIdx = vec.size()-1;
-return vec|lastidx
-}
 
-bool isempty(){
-    return vec.size() == 0;
-}
+    // Top
+    int top() {
+        if (isempty()) {
+            cout << "Stack is Empty" << endl;
+            return -1;
+        }
+        return vec[vec.size() - 1];
+    }
 
-int main(){
-    stack s; 
+    // Check if empty
+    bool isempty() {
+        return vec.size() == 0;
+    }
+};
 
-    s. push (3) ;
-    s. push (2) ;
-    s. push(1) ;
-return 0;
+int main() {
+    Stack s;
+
+    s.push(3);
+    s.push(2);
+    s.push(1);
+
+    while (!s.isempty()) {
+        cout << s.top() << " ";
+        s.pop();
+    }
+
+    return 0;
 }
