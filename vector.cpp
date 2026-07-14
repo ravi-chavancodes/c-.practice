@@ -88,10 +88,7 @@ int main(){
 }
     */
 
-    
-#include <iostream>
-using namespace std;
-
+/*  // home
 int main() 
 {
     cout << "             /\\\n";
@@ -108,3 +105,4 @@ int main()
 
     return 0;
 }
+    */
