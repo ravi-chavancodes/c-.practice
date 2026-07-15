@@ -2,6 +2,7 @@
 #include <vector>
 using namespace std;
 
+/*  // stack
 class Stack {
     vector<int> vec;
 
@@ -47,3 +48,5 @@ int main() {
 
     return 0;
 }
+*/
+
