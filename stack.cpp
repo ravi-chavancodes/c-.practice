@@ -141,7 +141,7 @@ int main() {
 }
 */
 
-     // reverse a stack
+ /*  // reverse a stack
 
 // Push element at bottom
 void pushAtBottom(stack<int> &s, int x) {
@@ -188,3 +188,5 @@ int main() {
 
     return 0;
 }
+    */
+   
