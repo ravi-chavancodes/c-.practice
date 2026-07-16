@@ -190,8 +190,7 @@ int main() {
 }
     */
    
-  // stock span problem
-
+ /* // stock span problem
 
 void stockSpanProblem(vector<int> &stock, vector<int> &span)
 {
@@ -239,3 +238,5 @@ int main()
 
     return 0;
 }
+    */
+   
