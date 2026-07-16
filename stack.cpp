@@ -103,7 +103,7 @@ int main() {
 }
     */
 
-    // push at bottom of stack
+ /*   // push at bottom of stack
 
 void pushAtBottom(stack<int> &s, int x) {
     // Base case
@@ -139,3 +139,4 @@ int main() {
 
     return 0;
 }
+*/
