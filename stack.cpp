@@ -103,7 +103,7 @@ int main() {
 }
     */
 
- /*   // push at bottom of stack
+ /*  // push at bottom of stack
 
 void pushAtBottom(stack<int> &s, int x) {
     // Base case
@@ -140,3 +140,51 @@ int main() {
     return 0;
 }
 */
+
+     // reverse a stack
+
+// Push element at bottom
+void pushAtBottom(stack<int> &s, int x) {
+    if (s.empty()) {
+        s.push(x);
+        return;
+    }
+
+    int top = s.top();
+    s.pop();
+
+    pushAtBottom(s, x);
+
+    s.push(top);
+}
+
+// Reverse the stack
+void reverseStack(stack<int> &s) {
+    if (s.empty())
+        return;
+
+    int top = s.top();
+    s.pop();
+
+    reverseStack(s);
+
+    pushAtBottom(s, top);
+}
+
+int main() {
+    stack<int> s;
+
+    s.push(1);
+    s.push(2);
+    s.push(3);
+    s.push(4);
+
+    reverseStack(s);
+
+    while (!s.empty()) {
+        cout << s.top() << " ";
+        s.pop();
+    }
+
+    return 0;
+}
