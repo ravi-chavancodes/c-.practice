@@ -190,3 +190,6 @@ int main() {
 }
     */
    
+    // stock span problem
+
+    
