@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 #include <list>
+#include<stack>
 using namespace std;
 
 /*  // stack
@@ -98,6 +99,43 @@ int main() {
         s.pop();
     }
 
-    return 0;s
+    return 0;
 }
     */
+
+    // push at bottom of stack
+
+void pushAtBottom(stack<int> &s, int x) {
+    // Base case
+    if (s.empty()) {
+        s.push(x);
+        return;
+    }
+
+    // Save top element
+    int top = s.top();
+    s.pop();
+
+    // Push x at bottom
+    pushAtBottom(s, x);
+
+    // Put saved element back
+    s.push(top);
+}
+
+int main() {
+    stack<int> s;
+
+    s.push(1);
+    s.push(2);
+    s.push(3);
+
+    pushAtBottom(s, 4);
+
+    while (!s.empty()) {
+        cout << s.top() << " ";
+        s.pop();
+    }
+
+    return 0;
+}
