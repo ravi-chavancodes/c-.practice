@@ -240,7 +240,7 @@ int main()
 }
     */
    
-    // next greator element 
+ /*  // next greator element 
 
 void nextGreater(vector<int> arr, vector<int> &ans)
 {
@@ -288,3 +288,4 @@ int main()
 
     return 0;
 }
+    */
