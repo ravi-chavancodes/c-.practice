@@ -290,7 +290,7 @@ int main()
 }
     */
 
-    //valid paranthesis
+ /*  //valid paranthesis
 
     #include <iostream>
 #include <stack>
@@ -344,3 +344,6 @@ int main() {
 
     return 0;
 }
+    */
+
+    //
