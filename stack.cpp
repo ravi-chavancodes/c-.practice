@@ -346,7 +346,7 @@ int main() {
 }
     */
 
-    //duplicate paranthesis
+ /*  //duplicate paranthesis
 
 bool isDuplicate(string str) {
     stack<char> s;
@@ -380,3 +380,4 @@ int main() {
 
     return 0;
 }
+    */
