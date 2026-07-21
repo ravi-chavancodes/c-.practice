@@ -382,7 +382,7 @@ int main() {
 }
     */
 
-    // max  area in histogram
+ /*  // max  area in histogram
 
 void maxAreaHistogram(vector<int> height)
 {
@@ -450,3 +450,6 @@ int main()
 
     return 0;
 }
+    */
+
+    
