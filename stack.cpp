@@ -348,10 +348,6 @@ int main() {
 
     //duplicate paranthesis
 
-    #include <iostream>
-#include <stack>
-using namespace std;
-
 bool isDuplicate(string str) {
     stack<char> s;
 
