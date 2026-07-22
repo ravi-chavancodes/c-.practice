@@ -445,7 +445,6 @@ void maxAreaHistogram(vector<int> height)
 int main()
 {
     vector<int> height = {2,1,5,6,2,3};
-
     maxAreaHistogram(height);
 
     return 0;
