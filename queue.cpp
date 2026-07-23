@@ -2,10 +2,7 @@
 using namespace std;
 
    // queue implement using linked list
-
-#include <iostream>
-using namespace std;
-
+   
 class Node {
 public:
     int data;
