@@ -1,8 +1,8 @@
 #include<iostream>
 using namespace std;
 
-   // queue implement using linked list
-   
+ /*  // queue implement using linked list
+
 class Node {
 public:
     int data;
@@ -90,3 +90,5 @@ int main() {
 
     return 0;
 }
+    */
+   
