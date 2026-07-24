@@ -255,7 +255,7 @@ int main() {
 }
     */
 
-    // stack using 2 queue
+ /*  // stack using 2 queue
 
 class Stack {
     queue<int> q1;
@@ -308,3 +308,5 @@ int main() {
 
     return 0;
 }
+    */
+   
