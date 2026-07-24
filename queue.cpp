@@ -92,7 +92,7 @@ int main() {
 }
     */
    
-    // circular queue implementation
+ /*   // circular queue implementation
 
 class Queue {
     int *arr;
@@ -176,3 +176,5 @@ int main() {
 
     return 0;
 }
+    */
+   
