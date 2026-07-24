@@ -1,5 +1,6 @@
 #include<iostream>
 #include<queue>
+#include<stack>
 using namespace std;
 
  /*  // queue implement using linked list
@@ -198,10 +199,6 @@ int main() {
     */
 
     // queue using 2 stack
-
-#include <iostream>
-#include <stack>
-using namespace std;
 
 class Queue {
     stack<int> s1;
