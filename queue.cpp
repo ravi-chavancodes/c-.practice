@@ -94,9 +94,6 @@ int main() {
    
     // circular queue implementation
 
-   #include <iostream>
-using namespace std;
-
 class Queue {
     int *arr;
     int capacity;
