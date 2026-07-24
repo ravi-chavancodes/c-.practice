@@ -257,10 +257,6 @@ int main() {
 
     // stack using 2 queue
 
-#include <iostream>
-#include <queue>
-using namespace std;
-
 class Stack {
     queue<int> q1;
     queue<int> q2;
