@@ -94,7 +94,7 @@ int main() {
    
     // circular queue implementation
 
-    #include <iostream>
+   #include <iostream>
 using namespace std;
 
 class Queue {
@@ -145,6 +145,15 @@ public:
     bool empty() {
         return currSize == 0;
     }
+
+    void printRear() {
+        if (empty()) {
+            cout << "Queue is EMPTY\n";
+            return;
+        }
+
+        cout << arr[r] << endl;
+    }
 };
 
 int main() {
@@ -154,7 +163,7 @@ int main() {
     q.push(2);
     q.push(3);
     q.push(4);
-    q.push(5);   // Queue Full
+    q.push(5);   // Queue is full
 
     cout << q.front() << endl;
 
@@ -166,6 +175,7 @@ int main() {
 
     cout << q.front() << endl;
 
-    q.printRear() ;
+    q.printRear();
+
     return 0;
 }
