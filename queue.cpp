@@ -1,4 +1,5 @@
 #include<iostream>
+#include<queue>
 using namespace std;
 
  /*  // queue implement using linked list
@@ -179,10 +180,6 @@ int main() {
     */
    
     //stl
-
-#include <iostream>
-#include <queue>
-using namespace std;
 
 int main() {
     queue<int> q;
