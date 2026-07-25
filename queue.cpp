@@ -386,7 +386,7 @@ int main() {
 }
     */
 
-    // reverse a queue
+ /*  // reverse a queue
 
 void reverse(queue<int> &q) {
     stack<int> s;
@@ -420,3 +420,6 @@ int main() {
 
     return 0;
 }
+    */
+
+    //
