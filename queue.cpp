@@ -344,11 +344,7 @@ int main() {
     */
 
     // interleave 2 queues
-
-#include <iostream>
-#include <queue>
-using namespace std;
-
+    
 void interleave(queue<int>& org) {
     int n = org.size();
 
