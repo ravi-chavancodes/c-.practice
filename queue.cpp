@@ -388,11 +388,6 @@ int main() {
 
     // reverse a queue
 
-#include <iostream>
-#include <queue>
-#include <stack>
-using namespace std;
-
 void reverse(queue<int> &q) {
     stack<int> s;
 
