@@ -310,7 +310,7 @@ int main() {
 }
     */
 
-    // non repeating letter
+ /*  // non repeating letter
 
 void FirstNonRepeat(string str) {
     queue<char> Q;
@@ -341,3 +341,6 @@ int main() {
 
     return 0;
 }
+    */
+
+    
