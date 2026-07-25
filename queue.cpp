@@ -312,10 +312,6 @@ int main() {
 
     // non repeating letter
 
-#include <iostream>
-#include <queue>
-using namespace std;
-
 void FirstNonRepeat(string str) {
     queue<char> Q;
     int freq[26] = {0};
