@@ -1,8 +1,8 @@
 #include<iostream>
 using namespace std;
 
-  // max no of acticity
-  
+ /* // max no of acticity
+
 int maxActivities(vector<int> start, vector<int> end) {
 
     // A0 select
@@ -34,3 +34,4 @@ int main() {
 
     return 0;
 }
+*/
