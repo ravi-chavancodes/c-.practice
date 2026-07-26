@@ -2,11 +2,7 @@
 using namespace std;
 
   // max no of acticity
-
-#include <iostream>
-#include <vector>
-using namespace std;
-
+  
 int maxActivities(vector<int> start, vector<int> end) {
 
     // A0 select
