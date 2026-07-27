@@ -21,7 +21,7 @@ int maxActivities(vector<int> start, vector<int> end) {
         }
     }
 
-    return count;
+    return count
 }
 
 int main() {
@@ -35,3 +35,5 @@ int main() {
     return 0;
 }
 */
+
+    // 
