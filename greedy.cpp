@@ -36,7 +36,7 @@ int main() {
 }
 */
 
-    // pair in c++ 
+ /*   // pair in c++ 
 
 bool compare(pair<int, int> p1, pair<int, int> p2)
 {
@@ -71,3 +71,5 @@ int main()
 
     return 0;
 }
+    */
+   
