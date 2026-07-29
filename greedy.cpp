@@ -127,11 +127,6 @@ int main() {
 
     // min absolute diff pair
 
-#include <iostream>
-#include <vector>
-#include <algorithm>
-using namespace std;
-
 int main() {
     vector<int> A = {4, 1, 8};
     vector<int> B = {12, 3, 6, 5};
