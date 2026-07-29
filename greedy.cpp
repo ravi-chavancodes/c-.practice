@@ -75,10 +75,6 @@ int main()
     */
 
     // fractional knapsack
-#include <iostream>
-#include <vector>
-#include <algorithm>
-using namespace std;
 
 bool compare(pair<double, int> p1, pair<double, int> p2) {
     return p1.first > p2.first;
