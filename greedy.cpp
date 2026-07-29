@@ -125,7 +125,7 @@ int main() {
 }
     */
 
-    // min absolute diff pair
+ /*   // min absolute diff pair
 
 int main() {
     vector<int> A = {4, 1, 8};
@@ -144,3 +144,6 @@ int main() {
 
     return 0;
 }
+    */
+
+    
