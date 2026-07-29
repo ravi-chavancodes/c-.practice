@@ -36,7 +36,7 @@ int main() {
 }
 */
 
- /*   // pair in c++ 
+ /*  // pair in c++ 
 
 bool compare(pair<int, int> p1, pair<int, int> p2)
 {
@@ -74,7 +74,7 @@ int main()
 }
     */
 
-    // fractional knapsack
+ /*  // fractional knapsack
 
 bool compare(pair<double, int> p1, pair<double, int> p2) {
     return p1.first > p2.first;
@@ -109,6 +109,7 @@ int fractionalKnapsack(vector<int> val, vector<int> wt, int W) {
         }
     }
 
+    cout << "max value =" <<ans<<endl;
     return ans;
 }
 
@@ -122,4 +123,6 @@ int main() {
 
     return 0;
 }
-    
+    */
+
+    // 
