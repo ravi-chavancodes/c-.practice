@@ -192,10 +192,6 @@ int main() {
 
     // indian coin
 
-#include <iostream>
-#include <vector>
-using namespace std;
-
 int getMinChange(vector<int> coins, int V) {
     int ans = 0;
     int n = coins.size();
