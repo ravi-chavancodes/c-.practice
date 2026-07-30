@@ -259,12 +259,7 @@ int main() {
     */
 
     // job sequence variation
-
-#include <iostream>
-#include <vector>
-#include <algorithm>
-using namespace std;
-
+    
 class Job {
 public:
     int idx;
