@@ -148,11 +148,6 @@ int main() {
 
     // max length chain of pair
 
-#include <iostream>
-#include <vector>
-#include <algorithm>
-using namespace std;
-
 bool compare(pair<int, int> p1, pair<int, int> p2) {
     // ascending
     return p1.second < p2.second;
