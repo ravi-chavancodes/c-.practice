@@ -258,8 +258,8 @@ int main() {
 }
     */
 
-    // job sequence variation
-    
+/*  // job sequence variation
+
 class Job {
 public:
     int idx;
@@ -318,3 +318,6 @@ int main() {
 
     return 0;
 }
+    */
+
+   //
