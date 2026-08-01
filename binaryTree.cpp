@@ -166,11 +166,6 @@ int main() {
 
     // tree traversal (level order traversal)
 
-#include <iostream>
-#include <vector>
-#include <queue>
-using namespace std;
-
 class Node {
 public:
     int data;
