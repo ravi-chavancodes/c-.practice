@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std ;
 
-/* // build tree from preorder
+/*  // build tree from preorder
 
 // Node class represents each node of the binary tree
 class Node {
@@ -61,11 +61,7 @@ int main() {
 }
     */
 
-    // inorder , postorder , preoder
-
-#include <iostream>
-#include <vector>
-using namespace std;
+ /* // inorder , postorder , preoder
 
 class Node {
 public:
@@ -166,3 +162,5 @@ int main() {
 
     return 0;
 }
+    */
+   
