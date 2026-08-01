@@ -163,4 +163,112 @@ int main() {
     return 0;
 }
     */
-   
+
+    // tree traversal (level order traversal)
+
+#include <iostream>
+#include <vector>
+#include <queue>
+using namespace std;
+
+class Node {
+public:
+    int data;
+    Node* left;
+    Node* right;
+
+    Node(int data) {
+        this->data = data;
+        left = right = NULL;
+    }
+};
+
+int idx = -1;
+
+
+// Build Binary Tree
+Node* buildTree(vector<int> &nodes) {
+
+    idx++;
+
+    // If value is -1, node is NULL
+    if (nodes[idx] == -1) {
+        return NULL;
+    }
+
+    // Create new node
+    Node* currNode = new Node(nodes[idx]);
+
+    // Create left subtree
+    currNode->left = buildTree(nodes);
+
+    // Create right subtree
+    currNode->right = buildTree(nodes);
+
+    return currNode;
+}
+
+
+// Level Order Traversal
+// Uses Queue (BFS)
+void levelorder(Node* root) {
+
+    // If tree is empty
+    if (root == NULL) {
+        return;
+    }
+
+    // Create queue to store nodes
+    queue<Node*> q;
+
+    // Push root node into queue
+    q.push(root);
+
+
+    while (!q.empty()) {
+
+        // Store front node
+        Node* curr = q.front();
+
+        // Remove front node from queue
+        q.pop();
+
+
+        // Print current node data
+        cout << curr->data << " ";
+
+
+        // If left child exists, add it to queue
+        if (curr->left != NULL) {
+            q.push(curr->left);
+        }
+
+
+        // If right child exists, add it to queue
+        if (curr->right != NULL) {
+            q.push(curr->right);
+        }
+    }
+
+    cout << endl;
+}
+
+
+int main() {
+
+    vector<int> nodes = {
+        1, 2, 4, -1, -1, 5, -1, -1,
+        3, -1, 6, -1, -1
+    };
+
+
+    // Build tree
+    Node* root = buildTree(nodes);
+
+
+    // Level order traversal
+    levelorder(root);
+
+
+    return 0;
+}
