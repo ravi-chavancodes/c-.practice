@@ -1,11 +1,8 @@
 #include<iostream>
+#include <vector>
 using namespace std ;
 
 // build tree from preorder
-
-#include <iostream>
-#include <vector>
-using namespace std;
 
 class Node {
 public:
