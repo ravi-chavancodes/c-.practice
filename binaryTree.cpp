@@ -274,11 +274,6 @@ int main() {
 // Level Order Traversal
 // Order: Level by Level using Queue
 
-#include <iostream>
-#include <vector>
-#include <queue>
-using namespace std;
-
 class Node {
 public:
     int data;
