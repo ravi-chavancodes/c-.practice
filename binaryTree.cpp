@@ -374,7 +374,7 @@ int main() {
 
     // height of a tree
 
-int height(Node* root) 
+int height(Node* root) {
     if (root == NULL) {
         return 0;
     }
