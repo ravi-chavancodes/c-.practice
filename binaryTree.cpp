@@ -374,6 +374,40 @@ int main() {
 
     // height of a tree
 
+#include <iostream>
+#include <vector>
+using namespace std;
+
+class Node {
+public:
+    int data;
+    Node* left;
+    Node* right;
+
+    Node(int val) {
+        data = val;
+        left = NULL;
+        right = NULL;
+    }
+};
+
+int idx = -1;
+
+Node* buildTree(vector<int> nodes) {
+    idx++;
+
+    if (nodes[idx] == -1) {
+        return NULL;
+    }
+
+    Node* newNode = new Node(nodes[idx]);
+
+    newNode->left = buildTree(nodes);
+    newNode->right = buildTree(nodes);
+
+    return newNode;
+}
+
 int height(Node* root) {
     if (root == NULL) {
         return 0;
@@ -382,12 +416,20 @@ int height(Node* root) {
     int leftHt = height(root->left);
     int rightHt = height(root->right);
 
-    int currHt = max(leftHt, rightHt) + 1;
+    int currHt;
+
+    if (leftHt > rightHt) {
+        currHt = leftHt + 1;
+    }
+    else {
+        currHt = rightHt + 1;
+    }
 
     return currHt;
 }
 
 int main() {
+
     vector<int> nodes = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1};
 
     Node* root = buildTree(nodes);
