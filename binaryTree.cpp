@@ -374,10 +374,6 @@ int main() {
 
     // height of a tree
 
-#include <iostream>
-#include <vector>
-using namespace std;
-
 class Node {
 public:
     int data;
