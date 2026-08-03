@@ -372,7 +372,7 @@ int main() {
 }
     */
 
-    // height of a tree
+/*  // height of a tree
 
 class Node {
 public:
@@ -434,3 +434,5 @@ int main() {
 
     return 0;
 }
+    */
+
