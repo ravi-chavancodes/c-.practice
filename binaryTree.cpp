@@ -492,4 +492,64 @@ int main() {
 }
 */
 
- 
+ /*   // sum of nodes
+
+class Node {
+public:
+    int data;
+    Node* left;
+    Node* right;
+
+    Node(int val) {
+        data = val;
+        left = NULL;
+        right = NULL;
+    }
+};
+
+int idx = -1;
+
+Node* buildTree(vector<int> nodes) {
+
+    idx++;
+
+    if (nodes[idx] == -1) {
+        return NULL;
+    }
+
+    Node* newNode = new Node(nodes[idx]);
+
+    newNode->left = buildTree(nodes);
+    newNode->right = buildTree(nodes);
+
+    return newNode;
+}
+
+int sum(Node* root) {
+
+    if (root == NULL) {
+        return 0;
+    }
+
+    int leftSum = sum(root->left);
+    int rightSum = sum(root->right);
+
+    int currSum = leftSum + rightSum + root->data;
+
+    return currSum;
+}
+
+int main() {
+
+    vector<int> nodes = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1};
+
+    Node* root = buildTree(nodes);
+
+    cout << "Sum of nodes : " << sum(root) << endl;
+
+    return 0;
+}
+    */
+
+
+    
