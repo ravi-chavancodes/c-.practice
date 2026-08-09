@@ -88,22 +88,3 @@ int main(){
 }
     */
 
-/*  // home
-int main() 
-{
-    cout << "             /\\\n";
-    cout << "            /  \\\n";
-    cout << "           /    \\\n";
-    cout << "          /      \\\n";
-    cout << "         /________\\\n";
-    cout << "        |          |\n";
-    cout << "        |      []  |\n";
-    cout << "        |   __     |\n";
-    cout << "        |  |  |    |\n";
-    cout << "        |  |  |    |\n";
-    cout << "        |__|__|____|\n";
-
-    return 0;
-}
-    */
-
