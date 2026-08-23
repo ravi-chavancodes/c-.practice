@@ -1,3 +1,5 @@
+#include<iostream>
+using namespace std;
 
 /*  // I/O of 2D array
 int main(){
