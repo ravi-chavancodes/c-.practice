@@ -2,11 +2,19 @@
 using namespace std;
 
 int main(){
-int a = 10;
-int b = 5;
+ int a = 1;
+ int b = 2;
+ char op ;
 
-cout<<"a = " << sizeof(int)<<endl;
-cout<<"b = " << b <<endl;
+ cout << "Enter operator: ";
 
+    cin >> op;
+
+ if (op == '+')
+ {
+    cout<<"a+b"<<(a+b)<<endl;
+ }
+ 
+ 
     return 0;
 }
