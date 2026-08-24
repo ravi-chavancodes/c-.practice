@@ -2,12 +2,19 @@
 using namespace std;
 
 int main(){
-int n =20;
+int n =10829;
+int sumdig = 0;
 
-   for(int i = n ; i >= 5 ; i--){
+while (n>0)
+{
+   int lastdig = n % 10;
+   cout<<lastdig;
+   sumdig += lastdig;
+   n /= 10;
+}
+cout<<"sum of dig"<<sumdig<<endl;
 
-      cout<<i<<endl;
-   }
+
 
 return 0;
 }
