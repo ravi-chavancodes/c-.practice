@@ -2,19 +2,11 @@
 using namespace std;
 
 int main(){
- int a = 1;
- int b = 2;
- char op ;
 
- cout << "Enter operator: ";
+   for(int i = 0 ; i <=5 ; i++){
+cout<<"apna collge"<<endl;
 
-    cin >> op;
-
- if (op == '+')
- {
-    cout<<"a+b"<<(a+b)<<endl;
- }
- 
- 
-    return 0;
+   }
+cout<<endl;
+return 0;
 }
