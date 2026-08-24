@@ -2,11 +2,11 @@
 using namespace std;
 
 int main(){
-int  n =0;
-while(n<=5){
-   cout<<n<<endl;
-   n++;
-}
+
+   for(int i = 0 ; i <= 4 ; i++){
+
+      cout<<"****"<<endl;
+   }
 
 return 0;
 }
