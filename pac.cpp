@@ -2,20 +2,24 @@
 using namespace std;
 
 int main(){
-int n =10829;
-int sumdig = 0;
+int n ;
+bool isprime = true;
+cin>>n;
 
-while (n>0)
+for (int i = 2; i <= n -1 ; i++)
 {
-   int lastdig = n % 10;
-   cout<<lastdig;
-if(lastdig % 2 != 0){
-   sumdig += lastdig;
+   if(n%i == 0){
+      isprime = false;
+      break;
+   }
 }
-   n /= 10;
+if (isprime == true)
+{
+   cout<<"prime no"<<endl;
 }
-cout<<"sum of dig"<<sumdig<<endl;
-
+else{
+   cout<<"not prime"<<endl;
+}
 
 
 return 0;
