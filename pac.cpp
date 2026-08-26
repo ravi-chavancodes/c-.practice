@@ -13,14 +13,3 @@ for (int i = 2; i <= n -1 ; i++)
       break;
    }
 }
-if (isprime == true)
-{
-   cout<<"prime no"<<endl;
-}
-else{
-   cout<<"not prime"<<endl;
-}
-
-
-return 0;
-}
