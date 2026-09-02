@@ -1,11 +1,12 @@
 #include<iostream>
 using namespace std;
 
-void hello(){
-cout<<"hello"<<endl;
+int sum(int a,int b){
+int sum = a+b;
+return sum;
 }
 int main(){
-hello();
-hello();
+int s = sum(2,5);
+cout<<"sum ="<<s <<endl;
     return 0;
 }
