@@ -402,24 +402,3 @@ void reverse(queue<int> &q) {
     }
 }
 
-int main() {
-    queue<int> q;
-
-    for (int i = 1; i <= 5; i++) {
-        q.push(i);
-    }
-
-    reverse(q);
-
-    for (int i = 1; i <= 5; i++) {
-        cout << q.front() << " ";
-        q.pop();
-    }
-
-    cout << endl;
-
-    return 0;
-}
-    */
-
-    //
