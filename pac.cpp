@@ -6,6 +6,6 @@ cout<<"hello"<<endl;
 }
 int main(){
 hello();
-
+hello();
     return 0;
 }
