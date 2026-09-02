@@ -1,12 +1,16 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-int sum(int a,int b){
-int sum = a+b;
-return sum;
+int subs(int a , int b ){
+   
+     int subs = a-b;
+     return subs;
 }
+
+
 int main(){
-int s = sum(2,5);
-cout<<"sum ="<<s <<endl;
+
+    int n = subs(2,5);
+    cout<<"mius = "<<n<<endl;
     return 0;
 }
