@@ -7,6 +7,5 @@ int pro(int a , int b ){
 
 
 int main(){
- pro(2,4);
  cout<<pro(2,3)<<endl;
 }
