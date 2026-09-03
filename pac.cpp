@@ -2,13 +2,11 @@
 using namespace std;
 
 int pro(int a , int b ){
-   int pro = a*b;
-   return pro;
+   return a*b;
 }
 
 
 int main(){
-
-    int p = pro(2,4);
-    cout<<"multi ="<<p<<endl;
+ pro(2,4);
+ cout<<pro(2,3)<<endl;
 }
