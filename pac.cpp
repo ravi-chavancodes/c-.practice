@@ -1,16 +1,14 @@
 #include <iostream>
 using namespace std;
 
-int subs(int a , int b ){
-   
-     int subs = a-b;
-     return subs;
+int pro(int a , int b ){
+   int pro = a*b;
+   return pro;
 }
 
 
 int main(){
 
-    int n = subs(2,5);
-    cout<<"mius = "<<n<<endl;
-    return 0;
+    int p = pro(2,4);
+    cout<<"multi ="<<p<<endl;
 }
