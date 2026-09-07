@@ -7,7 +7,7 @@ int factorial (int n){
     {
         fact = fact * i;
     }
-    cout<<"facatorial = ("<<n<<")="<<fact<<endl;
+    cout<<"facatorial = "<<n<<"="<<fact<<endl;
     return fact;
 }
 int main(){
