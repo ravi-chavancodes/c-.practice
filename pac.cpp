@@ -10,11 +10,16 @@ return fact;
 }
 
 int bincoeffecient(int n , int r){
-    
+    int val1 = factorial(n);
+     int val2 = factorial(r);
+      int val3 = factorial(n-r);
+     int result = val1 / (val2 * val3);
+
+     return result;
 }
 
 int main(){
  
-    cout<<isprime(3)<<endl;
+    cout<<bincoeffecient(5,2)<<endl;
     return 0;
 }
