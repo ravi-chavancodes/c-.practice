@@ -1,19 +1,38 @@
 #include <iostream>
 using namespace std;
 
-int sum(int a, int b){
-    cout << a + b << endl;
-    return a + b;
+bool isprime(int n){
+     if(n==1){
+        return false;
+     }
+
+    for (int i = 2; i*i <=n ; i++)
+    {
+        if (n%i == 0)
+        {
+            return false;
+        }
+        
+    }
+    return true;
 }
 
-float sum(float a, float b){
-    cout << a + b << endl;
-    return a + b;
+void allprimes(int n){
+   
+    for (int i = 2; i <= n ; i++)
+    {
+        if (isprime(i))
+        {
+            cout<<i<<" ";
+        }
+        
+    }
+    cout<<endl;
+
 }
 
 int main(){
-    sum(2, 3);
-    sum(1.5f, 2.5f);
+    allprimes(13);
 
     return 0;
 }
