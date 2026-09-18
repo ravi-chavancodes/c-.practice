@@ -33,6 +33,6 @@ void allprimes(int n){
 
 int main(){
     allprimes(13);
- s 
+ 
     return 0;
 }
