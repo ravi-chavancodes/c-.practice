@@ -1,37 +1,23 @@
 #include <iostream>
-
 using namespace std;
 
-int main(){
-int n ;
+int linearsearch(int arr[], int n , int key){
 
-cout<<" enter no of array : ";
-cin>>n;
+    for(int i = 0 ;  i < n ;i++){
+        
+        if(arr[i]==key){
+            return i;
+        }
 
-int arr[n];
-
-for (int i = 0; i < n; i++)
-{
-    cin>>arr[i];
-}
-
-for (int i = 0; i < n; i++)
-{
-    cout<<arr[i];
-}
-cout<<endl;
-
-int max =arr[0];
-
-for (int i = 0; i < n; i++)
-{
-    if (arr[i]>max)
-    {
-        max = arr[i];
     }
+    return -1;
 }
 
+int main(){
 
-cout<<"max = "<<max<<endl;
+    int arr[]={1,2,3,4,5,6};
+    int n = sizeof(arr)/sizeof(int);
+
+cout<<linearsearch(arr,n,5)<<endl;
     return 0;
 }
