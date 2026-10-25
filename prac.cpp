@@ -3,10 +3,24 @@
 using namespace std;
 
 int main(){
+int n ;
 
-    int arr[]={1,2,3,4};
+cout<<" enter no of array : ";
+cin>>n;
 
-    cout<<arr[1]<<endl;
+int arr[n];
+
+for (int i = 0; i < n; i++)
+{
+    cin>>arr[i];
+}
+
+for (int i = 0; i < n; i++)
+{
+    cout<<arr[i];
+}
+cout<<endl;
+return 0;
     
     return 0;
 }
