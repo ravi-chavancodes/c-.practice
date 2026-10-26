@@ -1,23 +1,24 @@
 #include <iostream>
 using namespace std;
 
-int linearsearch(int arr[], int n , int key){
+int main(){
+int n;
 
-    for(int i = 0 ;  i < n ;i++){
-        
-        if(arr[i]==key){
-            return i;
-        }
+cout<< "no of arr : " ;
+cin>> n;
 
-    }
-    return -1;
+int arr[n];
+for (int i = 0; i < n; i++)
+{
+    cin>>arr[i];
 }
 
-int main(){
+for (int i = 0; i < n; i++)
+{
+    cout<<arr[i];
+}
 
-    int arr[]={1,2,3,4,5,6};
-    int n = sizeof(arr)/sizeof(int);
+cout<<endl;
 
-cout<<linearsearch(arr,n,5)<<endl;
     return 0;
 }
