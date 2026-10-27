@@ -7,11 +7,13 @@ void subarray(int arr[], int n ){
      {
         for (int end = start; end < n; end++)
         {
+            int currsum =0;
             for ( int i  = start; i < end ; i++)
             {
-                cout<<arr[i];
+                currsum += arr[i];
+                
             }
-            cout<<" ";
+            cout<<currsum<<",";
         }
         cout<<endl;
      }
@@ -21,7 +23,7 @@ void subarray(int arr[], int n ){
 
 int main(){
 
-    int arr[]={1,2,3,4,5};
+    int arr[]={1,-2,3,-4,5};
     int n = 5;
 
 
