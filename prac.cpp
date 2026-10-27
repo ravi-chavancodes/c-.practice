@@ -1,29 +1,31 @@
-
 #include <iostream>
 using namespace std;
 
-void printarr(int arr[], int n ){
-
-    for (int i = 0; i < n; i++) {
-        cout << arr[i] << " ";
-    }
-cout << endl;
+void linear(int arr[],int n){
+for (int i = 0; i < n; i++)
+{
+    cout<<arr[i]<<" ";
 }
-int main() {
-   
-    int arr[] = {1, 2, 3, 4, 5};
-    int n = sizeof(arr) / sizeof(int);
+cout<<endl;
 
-    int start = 0;
-    int end = n - 1;
+}
 
-    while (start < end) {
-        swap(arr[start], arr[end]);
+int main(){
 
-        start++;
-        end--;
-    }
+    int arr[]={1,2,3,4,5};
+    int n = sizeof(arr)/sizeof(int);
 
-   printarr(arr,n);
-    return 0;
+int start = 0;
+int end = n-1;
+
+while(start<end){
+
+    swap(arr[start],arr[end]);
+
+    start ++;
+    end--;
+}
+linear(arr,n);
+
+return 0;
 }
