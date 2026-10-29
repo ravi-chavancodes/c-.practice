@@ -1,30 +1,42 @@
 #include<iostream>
 using namespace std;
 
-void subarray(int arr[], int n ){
-    int maxsum =INT_MIN;
+void print (int arr[],int n){
 
-     for (int start = 0; start < n; start++)
-     {
-        int currsum =0;
-        for (int end = start; end < n; end++)
-        {
-            currsum += arr[end];
-            maxsum = max(maxsum,currsum);
-          
-        }
-        cout<<endl;
-     }
+    for (int i = 0; i < n; i++)
+    {
+        cout<<arr[i];
+    }
+    cout<<endl;
+}
      
+void bubble (int arr[],int n){
+
+    for (int i = 0; i < n-1; i++)
+    {
+       for (int j = 0; j < n-i-1; j++)
+       {
+        if(arr[j]>arr[j+1]){
+        swap(arr[j],arr[j+1]);
+        }
+       }
+       
+    }
+    
 
 }
 
+
+
 int main(){
 
-    int arr[]={1,-2,3,-4,5};
+    int arr[]={1,3,4,5,2};
     int n = 5;
 
-
-    subarray(arr,n);
+   
+    print(arr,n);
+   bubble(arr,n);
+print(arr,n);
+   
     return 0;
 }
