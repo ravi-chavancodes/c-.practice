@@ -25,7 +25,7 @@ int main(){
 }
 */
 
- // spiral metrix  
+/* // spiral metrix  
 void spiral(int matrix [][4], int n,int m){
     int srow = 0 , scol = 0;
     int erow = n-1 , ecol = m-1 ; 
@@ -74,7 +74,7 @@ int matrix[4][4] = {{1,2,3,4},
     spiral (matrix , 4 , 4);
     return 0;
 }
-    
+    */
 
 /* // diaognal
 int diagonal( int mat[][4],int n) {
