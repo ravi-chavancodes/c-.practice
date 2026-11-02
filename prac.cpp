@@ -1,21 +1,22 @@
 #include<iostream>
 using namespace std;
 
-void print(int a ){ 
+int print(int a,int b ){ 
+int max = a;
+if(max<b){
+    max =b;
+}
+return max;
 
-    if (a%2==0)
-    {
-        cout<<"even"<<endl;
-    }
-    else
-    cout<<"odd"<<endl;
 }
 int main(){
 
     int a ;
-    cout<< "enter no ="<<endl;
+    int b ;
+    cout<< "enter no 1  ="<<endl;
     cin>> a;
-
-    print(a) ;
+cout<< "enter no 2  ="<<endl;
+ cin>> b;
+ cout<<"max no : "<<print(a,b)<<endl ;
     return 0;
 }
