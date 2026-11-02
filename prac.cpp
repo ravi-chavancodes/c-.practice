@@ -1,9 +1,14 @@
 #include<iostream>
 using namespace std;
 
-int print(int a ){ 
+void print(int a ){ 
 
-return a*a;
+    if (a%2==0)
+    {
+        cout<<"even"<<endl;
+    }
+    else
+    cout<<"odd"<<endl;
 }
 int main(){
 
@@ -11,6 +16,6 @@ int main(){
     cout<< "enter no ="<<endl;
     cin>> a;
 
-   cout<< print(a)<<endl;
+    print(a) ;
     return 0;
 }
