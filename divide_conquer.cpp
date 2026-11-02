@@ -84,7 +84,7 @@ int main()
 }
     */
 
-    // quick soort
+/*   // quick soort
 
 void printarr(int arr[],int n)
 {
@@ -136,6 +136,7 @@ void quicksort(int arr[],int si ,int ei){
 
         return 0;
     }
+*/
 
 /* // print the array
 void printarr (int arr[],int n ){
