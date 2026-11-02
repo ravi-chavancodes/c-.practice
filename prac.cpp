@@ -1,15 +1,16 @@
 #include<iostream>
 using namespace std;
 
-int print(int a , int b){ 
+int print(int a ){ 
 
-return a + b;
+return a*a;
 }
 int main(){
 
     int a ;
-    int b;
+    cout<< "enter no ="<<endl;
+    cin>> a;
 
-   cout<< print(2,3)<<endl;
+   cout<< print(a)<<endl;
     return 0;
 }
