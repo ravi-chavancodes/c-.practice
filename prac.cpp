@@ -4,13 +4,23 @@ using namespace std;
 
 int main(){
 
-    int arr[]={1,2,3,4,5};
-    int n = sizeof(arr)/sizeof(int);
+    int n;
+    cout<<" enter ";
+    cin>>n;
+
+    int arr[n];
 
     for (int i = 0; i < n; i++)
     {
-       cout<<arr[i]<<" "<<endl;
+       cin>>arr[i];
     }
+
+    for (int i = 0; i < n; i++)
+    {
+       cout<<arr[i]<<"," ;
+    }
+
+    cout<<endl;
     
 
     return 0;
