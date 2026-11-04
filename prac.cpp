@@ -18,9 +18,7 @@ int main(){
        
     }
     
-cout<<"max = "<<max<<endl;
-}
-    
+
 
     return 0;
 }
