@@ -3,39 +3,28 @@
 #include <string>
 using namespace std;
 
-void print(int arr[] , int n){
+void print(string str , string subset){
 
-    for (int i = 0; i < n; i++)
+    if (str.size()==0)
     {
-        cout<<arr[i]<< " ";
-    }
-    cout<<endl;
-}
+        cout<<subset<<endl;
 
-void change(int arr[], int n,int i){
-
-    if (i==n)
-    {
-        print(arr,n);
         return;
     }
+
+    char ch = str[0];
+
+    print(str.substr(1,str.size()-1),subset +ch);
+
+    print(str.substr(1,str.size()-1),subset );
     
-
-    arr[i]=i+1;
-    change(arr,n,i+1);
-    arr[i]-=2;
-    
-
-
 }
 
 int main(){
 
-    int arr[5]={0};
-    int n = 5;
+   string str = "abc";
+   string subset = "";
 
-    change(arr, n , 0);
-    print(arr,n);
-
+print(str,subset);
     return 0;
 }
