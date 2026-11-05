@@ -53,11 +53,11 @@ void printSubsets(string str, string subset) {
 
     // Yes choice (include current character)
 
-    printSubsets(str.substr(1), subset + ch);
+    printSubsets(str.substr(1,str.size()-1), subset + ch);
 
     // No choice (exclude current character)
 
-    printSubsets(str.substr(1), subset);
+    printSubsets(str.substr(1,str.size()-1), subset);
 
 }
 
