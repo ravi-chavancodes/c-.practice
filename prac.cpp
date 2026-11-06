@@ -3,28 +3,33 @@
 #include <string>
 using namespace std;
 
-void print(string str , string subset){
+void print(string str , string ans ){
 
-    if (str.size()==0)
+    int n = str.size();
+
+    if (n==0)
     {
-        cout<<subset<<endl;
-
-        return;
+       cout<<ans<<endl;
+       return;
     }
-
-    char ch = str[0];
-
-    print(str.substr(1,str.size()-1),subset +ch);
-
-    print(str.substr(1,str.size()-1),subset );
     
+    for (int i = 0; i < n; i++)
+    {
+        char ch = str[i];
+    
+    string newstr = str.substr(0,i)+ str.substr(i+1,n-i-1);
+    print(newstr,ans + ch);
+
+    }
 }
+
 
 int main(){
 
    string str = "abc";
-   string subset = "";
+   string ans = "";
 
-print(str,subset);
+print(str,ans);
     return 0;
+
 }
