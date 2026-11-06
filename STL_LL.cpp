@@ -43,13 +43,28 @@ else{
 
    }
 
+void print(){
+    node* temp = head;
+
+while (temp != NULL)
+{
+    cout<<temp->data<<"->";
+    temp = temp->next;
+    
+}
+cout<<"null"<<endl;
+}
+
 };
 
 int main()
 {
 
     list ll;
-    ll.push_front(0);
+    ll.push_front(5);
+    ll.push_front(4);
+    ll.push_front(3);
+    ll.print();
     return 0;
 }
 
