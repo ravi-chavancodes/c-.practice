@@ -90,6 +90,21 @@ void pop_back(){
     tail = temp;
 }
 
+int iterator(int key){
+    node* temp = head;
+    int idx = 0;
+
+while (temp!=NULL)
+{
+    if (temp->data==key)
+    {
+        return idx;
+    }
+    temp=temp->next;
+    idx++;
+}
+return -1;
+}
 
 };
 
@@ -106,6 +121,7 @@ int main()
      ll.pop_back();
     ll.print();
 
+    cout<<ll.iterator(10)<<endl;
     return 0;
 }
 
