@@ -28,6 +28,7 @@ public:
  tail = NULL;
    }
 
+   // push. front 
    void push_front(int val){
 
 node* newnode = new node(val);
@@ -42,7 +43,7 @@ else{
 }
 
    }
-
+// printitng the ll
 void print(){
     node* temp = head;
 
@@ -55,6 +56,19 @@ while (temp != NULL)
 cout<<"null"<<endl;
 }
 
+void insert (int val,int pos){
+
+    node* newnode = new node(val);
+    node* temp = head;
+    for (int i = 0; i < pos-1; i++)
+    {
+        /* code */
+    }
+    
+
+
+}
+
 };
 
 int main()
@@ -64,6 +78,9 @@ int main()
     ll.push_front(5);
     ll.push_front(4);
     ll.push_front(3);
+    ll.print();
+
+    ll.insert(10,1);
     ll.print();
     return 0;
 }
