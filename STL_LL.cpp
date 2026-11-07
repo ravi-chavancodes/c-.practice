@@ -59,12 +59,16 @@ cout<<"null"<<endl;
 void insert (int val,int pos){
 
     node* newnode = new node(val);
+
     node* temp = head;
     for (int i = 0; i < pos-1; i++)
     {
-        /* code */
+        temp = temp->next;
     }
     
+
+    newnode->next=temp->next;
+    temp->next= newnode;
 
 
 }
