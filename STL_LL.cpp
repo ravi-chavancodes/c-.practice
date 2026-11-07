@@ -70,8 +70,15 @@ void insert (int val,int pos){
     newnode->next=temp->next;
     temp->next= newnode;
 
-
 }
+
+void pop_front(){
+    node* temp = head;
+    head = head->next;
+    temp->next = NULL;
+    delete temp;
+}
+
 
 };
 
@@ -85,6 +92,8 @@ int main()
     ll.print();
 
     ll.insert(10,1);
+    
+    ll.pop_front();
     ll.print();
     return 0;
 }
