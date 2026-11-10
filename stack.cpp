@@ -49,6 +49,7 @@ int main() {
     cout << s.top() << " ";
         s.pop();
     }
+cout<<endl;
 
     return 0;
 }
