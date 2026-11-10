@@ -6,8 +6,9 @@
 using namespace std;
 
 /*  // stack
+template<class T>
 class Stack {
-    vector<int> vec;
+    vector<T> vec;
 
 public:
     // Push
@@ -23,12 +24,13 @@ public:
     }
 
     // Top
-    int top() {
-        if (isempty()) {
-            cout << "Stack is Empty" << endl;
-            return -1;
-        }
-        return vec[vec.size() - 1];
+    T top() {
+        //if (isempty()) {
+            //cout << "Stack is Empty" << endl;
+            //return -1;
+       // }
+       int lastidx =vec.size() - 1;
+        return vec[lastidx];
     }
 
     // Check if empty
