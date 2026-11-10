@@ -40,14 +40,13 @@ public:
 };
 
 int main() {
-    Stack s;
+    Stack <int> s;
 
     s.push(3);
     s.push(2);
     s.push(1);
 
-    while (!s.isempty()) {
-        cout << s.top() << " ";
+    cout << s.top() << " ";
         s.pop();
     }
 
