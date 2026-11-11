@@ -98,7 +98,7 @@ int main() {
 
 class Queue {
     int *arr;
-    int capacity;
+    int capacity;  // total capacity
     int currSize;
     int f, r;
 
@@ -112,10 +112,13 @@ public:
     }
 
     void push(int data) {
+    // if no space left then full
+
         if (currSize == capacity) {
             cout << "Queue is FULL\n";
             return;
         }
+    // if last has no space it comes to front index data by usng formula
 
         r = (r + 1) % capacity;
         arr[r] = data;
@@ -207,16 +210,16 @@ class Queue {
 public:
 
     void push(int data) {
-        // s1 -> s2
+        // s1 -> s2 (all s1 data  goes to s2)
         while (!s1.empty()) {
             s2.push(s1.top());
             s1.pop();
         }
 
-        // push new element
+        // push new element in s1 (in this s1 is empty because all goes to s2)
         s1.push(data);
 
-        // s2 -> s1
+        // s2 -> s1 ( as s1 has only 1 new element the s2 data give all element to s1 )
         while (!s2.empty()) {
             s1.push(s2.top());
             s2.pop();
@@ -310,26 +313,27 @@ int main() {
 }
     */
 
- /*  // non repeating letter
-
+ /*  // first non repeating letter
 void FirstNonRepeat(string str) {
-    queue<char> Q;
-    int freq[26] = {0};
+    queue<char> Q;                  // Queue to store characters in order
+    int freq[26] = {0};             // Frequency array for a-z
 
     for (int i = 0; i < str.size(); i++) {
-        char ch = str[i];
+        char ch = str[i];           // Current character
 
-        Q.push(ch);
-        freq[ch - 'a']++;
+        Q.push(ch);                 // Add current character to queue
+        freq[ch - 'a']++;           // Increase its frequency
 
+        // Remove characters from front if they are repeating
         while (!Q.empty() && freq[Q.front() - 'a'] > 1) {
             Q.pop();
         }
 
+        // Print result after each character
         if (Q.empty()) {
-            cout << "-1\n";
+            cout << "-1\n";         // No non-repeating character
         } else {
-            cout << Q.front() << "\n";
+            cout << Q.front() << "\n";  // First non-repeating character
         }
     }
 }
