@@ -3,33 +3,55 @@
 #include <string>
 using namespace std;
 
-void print(string str , string ans ){
-
-    int n = str.size();
-
-    if (n==0)
-    {
-       cout<<ans<<endl;
-       return;
-    }
-    
-    for (int i = 0; i < n; i++)
-    {
-        char ch = str[i];
-    
-    string newstr = str.substr(0,i)+ str.substr(i+1,n-i-1);
-    print(newstr,ans + ch);
-
-    }
-}
 
 
 int main(){
 
-   string str = "abc";
-   string ans = "";
+   int a[2][2];
+   int b [2][2];
+   int c [2][2]={0};
+   int n ;
 
-print(str,ans);
-    return 0;
+   cout<< "enter 1st"<<endl;
+   for (int i = 0; i < 2; i++)
+   {
+    for (int j = 0; j <2; j++)
+    {
+        cin>>a[i][j];
+    }
+   }
+   cout<< "enter 1st"<<endl;
+    for (int i = 0; i < 2; i++)
+   {
+    for (int j = 0; j <2; j++)
+    {
+        cin>>b[i][j];
+    }
+    }
+// calc 
+    for (int i = 0; i < 2; i++)
+   {
+    for (int j = 0; j <2; j++)
+    {
+        for (int k = 0; k < 2; k++)
+        {
+            c[i][j] += a[i][k] * b[k][j];
+        }
+        
+    }
+}
+    
+    for (int i = 0; i < 2; i++)
+    {
+       for (int j = 0; j < 2; j++)
+       {
+        cout<<c[i][j];
+       }
+       cout<<endl;
+    }
+    
+
+return 0;
+
 
 }
