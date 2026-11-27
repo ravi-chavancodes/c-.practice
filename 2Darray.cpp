@@ -1,6 +1,63 @@
 #include<iostream>
 using namespace std;
 
+/* // add and multiply of 2d array
+
+int main() {
+    int A[10][10], B[10][10];
+    int r1, c1, r2, c2;
+
+    cout << "Enter rows and columns of Matrix A: ";
+    cin >> r1 >> c1;
+
+    cout << "Enter Matrix A:\n";
+    for (int i = 0; i < r1; i++)
+        for (int j = 0; j < c1; j++)
+            cin >> A[i][j];
+
+    cout << "Enter rows and columns of Matrix B: ";
+    cin >> r2 >> c2;
+
+    cout << "Enter Matrix B:\n";
+    for (int i = 0; i < r2; i++)
+        for (int j = 0; j < c2; j++)
+            cin >> B[i][j];
+
+    // Matrix Addition
+    if (r1 == r2 && c1 == c2) {
+        cout << "\nAddition:\n";
+        for (int i = 0; i < r1; i++) {
+            for (int j = 0; j < c1; j++)
+                cout << A[i][j] + B[i][j] << " ";
+            cout << endl;
+        }
+    } else {
+        cout << "\nAddition not possible.\n";
+    }
+
+    // Matrix Multiplication
+    if (c1 == r2) {
+        cout << "\nMultiplication:\n";
+
+        for (int i = 0; i < r1; i++) {
+            for (int j = 0; j < c2; j++) {
+                int product = 0;
+
+                for (int k = 0; k < c1; k++)
+                    product += A[i][k] * B[k][j];
+
+                cout << product << " ";
+            }
+            cout << endl;
+        }
+    } else {
+        cout << "\nMultiplication not possible.\n";
+    }
+
+    return 0;
+}
+    */
+
 /*  // I/O of 2D array
 int main(){
     int arr[3][4];  // 3 is no of sttudent in row and 4 is the subject for all student in column

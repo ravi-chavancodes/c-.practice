@@ -541,10 +541,7 @@ int main() {
 }
     */
 
-    // diameter of a tree 
-
-
-
+ /*   // diameter of a tree 
 
 int height(Node* root) {
     if (root == NULL) return 0;
@@ -569,7 +566,69 @@ int main() {
     Node* root = buildTree(nodes);
     cout << "diam = " << diam(root) << endl;
 }
-    
+    */
 
+    // sub tree of anoher tree
+bool isidentical(Node* root1,Node* root2){
+
+ if (root1 == NULL&&root2==NULL)
+{
+    return true;
+}
+else if (root1 == NULL||root2==NULL)
+{
+    return false;
+}
+
+
+    if (root1->data != root2->data)
+    {
+        return false;
+    }
+    return isidentical(root1->left,root2->left)&&
+           isidentical(root1->right,root2->right);
+}
+
+bool issubtree(Node* root,Node* subroot){
+
+      if (root == NULL&&subroot==NULL)
+{
+    return true;
+}
+else if (root == NULL||subroot==NULL)
+{
+    return false;
+}
+
+
+    if (root->data == subroot->data)
+    {
+       isidentical(root,subroot);
+    }
+    
+   int isleftsubtree = issubtree(root->left,subroot);
+   if (!isleftsubtree)
+   {
+    return issubtree(root->right,subroot);
+   }
+   
+   return true;
+}
+
+
+int main(){
+
+    vector<int>node = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1};
+
+    Node* root = buildTree(nodes);
+    
+    Node* subroot   = new Node(2);
+    subroot ->left  = new Node(4);
+    subroot ->right = new Node(5);
+
+    issubtree(root,subroot);
+    return 0;
+}
+    
 
 
