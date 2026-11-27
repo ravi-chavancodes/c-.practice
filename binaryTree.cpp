@@ -1,48 +1,38 @@
-#include<iostream>
+#include <iostream>
 #include <vector>
-#include <queue>
-using namespace std ;
+#include <algorithm>
+using namespace std;
 
-/*  // build tree from preorder
-
-// Node class represents each node of the binary tree
 class Node {
 public:
-    int data;       // Stores the value of the node
-    Node* left;     // Pointer to the left child
-    Node* right;    // Pointer to the right child
+    int data;
+    Node* left;
+    Node* right;
 
-    // Constructor to initialize a new node
     Node(int data) {
-        this->data = data;   // Assign value to the node
-        left = right = NULL; // Initially both children are NULL
+        this->data = data;
+        left = right = NULL;
     }
 };
 
-int idx = -1; // Global index to traverse the preorder array
+int idx = -1;
 
-// Function to build the binary tree
-Node* buildTree(vector<int> &nodes) {
-    idx++; // Move to the next element in the preorder array
+Node* buildTree(vector<int>& nodes) {
+    idx++;
 
-    // If current value is -1, this node is NULL
     if (nodes[idx] == -1) {
         return NULL;
     }
 
-    // Create a new node with the current value
     Node* currNode = new Node(nodes[idx]);
 
-    // Recursively build the left subtree
     currNode->left = buildTree(nodes);
-
-    // Recursively build the right subtree
     currNode->right = buildTree(nodes);
 
-    // Return the root of the constructed subtree
     return currNode;
 }
 
+/*
 int main() {
 
     // Preorder representation of the binary tree
@@ -555,30 +545,6 @@ int main() {
 
 
 
-class Node {
-public:
-    int data;
-    Node* left;
-    Node* right;
-
-    Node(int val) : data(val), left(NULL), right(NULL) {}
-};
-
-int idx = -1;
-
-Node* buildTree(const vector<int>& nodes) {
-    idx++;
-
-    if (nodes[idx] == -1) {
-        return NULL;
-    }
-
-    Node* newNode = new Node(nodes[idx]);
-    newNode->left = buildTree(nodes);
-    newNode->right = buildTree(nodes);
-
-    return newNode;
-}
 
 int height(Node* root) {
     if (root == NULL) return 0;
@@ -603,3 +569,7 @@ int main() {
     Node* root = buildTree(nodes);
     cout << "diam = " << diam(root) << endl;
 }
+    
+
+
+
