@@ -551,5 +551,55 @@ int main() {
 }
     */
 
+    // diameter of a tree 
 
-    
+
+
+class Node {
+public:
+    int data;
+    Node* left;
+    Node* right;
+
+    Node(int val) : data(val), left(NULL), right(NULL) {}
+};
+
+int idx = -1;
+
+Node* buildTree(const vector<int>& nodes) {
+    idx++;
+
+    if (nodes[idx] == -1) {
+        return NULL;
+    }
+
+    Node* newNode = new Node(nodes[idx]);
+    newNode->left = buildTree(nodes);
+    newNode->right = buildTree(nodes);
+
+    return newNode;
+}
+
+int height(Node* root) {
+    if (root == NULL) return 0;
+    return max(height(root->left), height(root->right)) + 1;
+}
+
+int diam(Node* root) {
+    if (root == NULL) {   // comparison, not assignment
+        return 0;
+    }
+
+    int currdiam = height(root->left) + height(root->right) + 1;
+    int leftdiam = diam(root->left);
+    int rightdiam = diam(root->right);
+
+    return max(currdiam, max(leftdiam, rightdiam));
+}
+
+int main() {
+    vector<int> nodes = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1};
+
+    Node* root = buildTree(nodes);
+    cout << "diam = " << diam(root) << endl;
+}
