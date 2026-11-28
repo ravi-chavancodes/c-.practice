@@ -620,11 +620,11 @@ int main(){
 
     vector<int>node = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1};
 
-    Node* root = buildTree(nodes);
+    Node* root = buildTree(node);
     
     Node* subroot   = new Node(2);
     subroot ->left  = new Node(4);
-    subroot ->right = new Node(5);
+    subroot ->right = new Node(5);s
 
     issubtree(root,subroot);
     return 0;
